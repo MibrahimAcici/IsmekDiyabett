@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.diyabet.diyabetgunlugum.view.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/dataTableFragment"
+        android:name="com.diyabet.diyabetgunlugum.view.fragment.DataTableFragment"
+        android:label="fragment_data_table"
+        tools:layout="@layout/fragment_data_table" />
+    <fragment
+        android:id="@+id/addMealFragment"
+        android:name="com.diyabet.diyabetgunlugum.view.fragment.AddMealFragment"
+        android:label="fragment_add_meal"
+        tools:layout="@layout/fragment_add_meal" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.diyabet.diyabetgunlugum.view.fragment.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/qrFragment"
+        android:name="com.diyabet.diyabetgunlugum.view.fragment.QrFragment"
+        android:label="fragment_qr"
+        tools:layout="@layout/fragment_qr" />
+</navigation>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/homeFragment"
+        android:title=""
+        android:icon="@drawable/home_icon"
+        />
+    <item android:id="@+id/dataTableFragment"
+        android:title=""
+        android:icon="@drawable/data_table_icon"
+        />
+    <item android:id="@+id/addMealFragment"
+        android:title=""
+        android:icon="@drawable/meal_table_icon"
+        />
+    <item android:id="@+id/profileFragment"
+        android:title=""
+        android:icon="@drawable/profile_icon"
+        />
+    <item android:id="@+id/qrFragment"
+        android:title=""
+        android:icon="@drawable/qr_icon"
+        />
+</menu>
