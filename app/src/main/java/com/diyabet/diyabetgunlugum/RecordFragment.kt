@@ -28,8 +28,9 @@ class RecordFragment : Fragment() {
             empty_text()
             val arrayAdapter = ArrayAdapter(requireContext(),R.layout.dropdown_item,resources.getStringArray(R.array.ebeveyn))
             autoComplateTextView.setAdapter(arrayAdapter)
-            if (check_text()){
+
                 btnRecord.setOnClickListener {
+                    if (check_text()){
                     Navigation.findNavController(view).navigate(R.id.action_recordFragment_to_loginFragment)
                 }
             }
@@ -39,24 +40,24 @@ class RecordFragment : Fragment() {
         var control = true
         binding.apply {
             if (tietName.text!!.isEmpty()) {
-                tietName.error = R.string.empty_input_text.toString()
+                tietName.error = "Lütfen boş bırakmayınız"
                 control = false
             }
             if (tietSurname.text!!.isEmpty()) {
-                tietSurname.error = R.string.empty_input_text.toString()
+                tietSurname.error = "Lütfen boş bırakmayınız"
                 control = false
             }
             if (tietEmail.text!!.isEmpty()) {
-                tietEmail.error = R.string.empty_input_text.toString()
+                tietEmail.error = "Lütfen boş bırakmayınız"
                 control = false
             } else if (!tietEmail.text!!.contains('@')) {
                 tilEmail.endIconDrawable = null
-                tietEmail.error = R.string.empty_input_text.toString()
+                tietEmail.error = "E-mail formatı hatalı"
                 control = false
             }
             if (tietPassword.text!!.isEmpty()) {
                 tilPassword.endIconDrawable = null
-                tietPassword.error = R.string.empty_input_text.toString()
+                tietPassword.error = "Lütfen boş bırakmayınız"
                 control = false
             }
         }
@@ -70,25 +71,25 @@ class RecordFragment : Fragment() {
         binding.apply {
             tietName.doOnTextChanged { text, start, before, count ->
                 if (text!!.isEmpty()) {
-                    tilName.error = R.string.empty_input_text.toString()
+                    tilName.error = "Lütfen boş bırakmayınız"
                     control = false
                 }
             }
             tietSurname.doOnTextChanged { text, start, before, count ->
                 if (text!!.isEmpty()) {
-                    tilSurname.error = R.string.empty_input_text.toString()
+                    tilSurname.error = "Lütfen boş bırakmayınız"
                     control = false
                 }
             }
             tietEmail.doOnTextChanged { text, start, before, count ->
                 if (text!!.isEmpty()) {
-                    tilEmail.error = R.string.empty_input_text.toString()
+                    tilEmail.error = "Lütfen boş bırakmayınız"
                     control = false
                 }
             }
             tietPassword.doOnTextChanged { text, start, before, count ->
                 if (text!!.isEmpty()) {
-                    tilPassword.error = R.string.empty_input_text.toString()
+                    tilPassword.error = "Lütfen boş bırakmayınız"
                     control = false
                 }
             }

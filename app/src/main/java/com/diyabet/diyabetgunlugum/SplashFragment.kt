@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import com.diyabet.diyabetgunlugum.databinding.FragmentSplashBinding
 
 class SplashFragment : Fragment() {
@@ -32,4 +33,5 @@ class SplashFragment : Fragment() {
 
         }
     }
+
 }
