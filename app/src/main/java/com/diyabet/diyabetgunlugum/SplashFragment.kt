@@ -26,12 +26,12 @@ class SplashFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.apply {
+
             Handler().postDelayed({
                 imgAplicationName.animation=AnimationUtils.loadAnimation(context,R.anim.animasyon)
                 Navigation.findNavController(view).navigate(R.id.action_splashFragment_to_loginFragment)
             },7000)
+        }
 
         }
     }
-
-}
