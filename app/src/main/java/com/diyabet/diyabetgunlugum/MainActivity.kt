@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         navController.addOnDestinationChangedListener { controller, destination, arguments ->
             binding.btmNav.apply {
                 when (destination.id) {
-                    R.id.loginFragment    ->  visibility= View.GONE
+                    //R.id.loginFragment    ->  visibility= View.GONE
                     R.id.recordFragment  -> visibility=View.GONE
                     R.id.splashFragment  -> visibility= View.GONE
                     else -> visibility= View.VISIBLE

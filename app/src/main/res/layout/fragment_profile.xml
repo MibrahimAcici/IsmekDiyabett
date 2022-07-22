@@ -8,15 +8,219 @@
     tools:context="view.fragment.ProfileFragment">
 
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="PROFİL"
-        android:textSize="50sp"
-        android:gravity="center"
+    <View
+
+        android:id="@+id/myRectangleViewTop"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:background="#75C09B" />
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@id/profile"
+        android:layout_width="104dp"
+        android:layout_height="104dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myRectangleViewTop"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="44dp"
+        android:src="@drawable/profile_image"
+        app:strokeColor="#192E35"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+        />
+
+    <View
+        android:id="@+id/name"
+        android:layout_width="184dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ic_medium_rectangle"
+        app:layout_constraintStart_toEndOf="@+id/profile"
+        app:layout_constraintTop_toBottomOf="@+id/myRectangleViewTop"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="52dp" />
+
+    <TextView
+        android:id="@+id/mehmet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/name"
+        app:layout_constraintTop_toTopOf="@+id/name"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="4dp"
+        android:textStyle="bold"
+        android:text="MEHMET"
+        android:textSize="19sp"
+        android:textColor="#FFFFFF" />
+
+
+    <View
+        android:id="@+id/surname"
+        android:layout_width="184dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ic_medium_rectangle"
+        app:layout_constraintStart_toEndOf="@+id/profile"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/turuncu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/surname"
+        app:layout_constraintTop_toTopOf="@+id/surname"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="4dp"
+        android:textStyle="bold"
+        android:text="TURUNCU"
+        android:textSize="19sp"
+        android:textColor="#FFFFFF" />
+
+    <View
+        android:id="@+id/mobil_phone"
+        android:layout_width="267dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="68dp"
+        android:background="@drawable/rectangle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile" />
+
+    <TextView
+        android:id="@+id/some_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/mobil_phone"
+        app:layout_constraintTop_toTopOf="@+id/mobil_phone"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="4dp"
+        android:textStyle="bold"
+        android:text="0534 787 78 78"
+        android:textSize="19sp"
+        android:textColor="#FFFFFF" />
+
+    <View
+        android:id="@+id/user_name"
+        android:layout_width="267dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/rectangle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mobil_phone" />
+
+    <TextView
+        android:id="@+id/mehmedturuncu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/user_name"
+        app:layout_constraintTop_toTopOf="@+id/user_name"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="4dp"
+        android:textStyle="bold"
+        android:text="mehmedturuncu"
+        android:textSize="19sp"
+        android:textColor="#FFFFFF" />
+
+    <View
+        android:id="@+id/birth_date"
+        android:layout_width="267dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/rectangle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_name" />
+
+    <TextView
+        android:id="@+id/some_id_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/birth_date"
+        app:layout_constraintTop_toTopOf="@+id/birth_date"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="4dp"
+        android:textStyle="bold"
+        android:text="01.10.2000"
+        android:textSize="19sp"
+        android:textColor="#FFFFFF" />
+
+    <View
+        android:id="@+id/gender"
+        android:layout_width="79dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/ic_small_rectangle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/birth_date" />
+
+    <TextView
+        android:id="@+id/erkek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ERKEK"
+        android:textColor="#FFFFFF"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/gender"
+        app:layout_constraintEnd_toEndOf="@+id/gender"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="@+id/gender"
+        app:layout_constraintTop_toTopOf="@+id/gender"
+        app:layout_constraintVertical_bias="0.285" />
+
+    <View
+        android:id="@+id/size"
+        android:layout_width="79dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/ic_small_rectangle"
+        app:layout_constraintStart_toEndOf="@id/gender"
+        app:layout_constraintTop_toBottomOf="@+id/birth_date" />
+
+    <TextView
+        android:id="@+id/some_id_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1.80"
+        android:textColor="#FFFFFF"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/size"
+        app:layout_constraintEnd_toEndOf="@+id/size"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toStartOf="@+id/size"
+        app:layout_constraintTop_toTopOf="@+id/size"
+        app:layout_constraintVertical_bias="0.285" />
+
+    <View
+        android:id="@+id/kilo"
+        android:layout_width="79dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/ic_small_rectangle"
+        app:layout_constraintStart_toEndOf="@id/size"
+        app:layout_constraintTop_toBottomOf="@+id/birth_date" />
+
+    <TextView
+        android:id="@+id/some_id_kilo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="90"
+        android:textColor="#FFFFFF"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/kilo"
+        app:layout_constraintEnd_toEndOf="@+id/kilo"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="@+id/kilo"
+        app:layout_constraintTop_toTopOf="@+id/kilo"
+        app:layout_constraintVertical_bias="0.285" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
