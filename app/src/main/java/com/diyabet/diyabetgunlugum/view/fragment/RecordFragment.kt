@@ -39,33 +39,33 @@ class RecordFragment : Fragment() {
         }
     }
     fun check_text(): Boolean {
-        var control = true
+        var isEmpty = true
         binding.apply {
             if (tietName.text!!.isEmpty()) {
                 tietName.error = "Lütfen boş bırakmayınız"
-                control = false
+                isEmpty = false
             }
             if (tietSurname.text!!.isEmpty()) {
                 tietSurname.error = "Lütfen boş bırakmayınız"
-                control = false
+                isEmpty = false
             }
             if (tietEmail.text!!.isEmpty()) {
                 tietEmail.error = "Lütfen boş bırakmayınız"
-                control = false
+                isEmpty = false
             } else if (!tietEmail.text!!.contains('@')) {
                 tilEmail.endIconDrawable = null
                 tietEmail.error = "E-mail formatı hatalı"
-                control = false
+                isEmpty = false
             }
             if (tietPassword.text!!.isEmpty()) {
                 tilPassword.endIconDrawable = null
                 tietPassword.error = "Lütfen boş bırakmayınız"
-                control = false
+                isEmpty = false
             }
         }
 
 
-        return control
+        return isEmpty
     }
 
     fun empty_text(): Boolean {
