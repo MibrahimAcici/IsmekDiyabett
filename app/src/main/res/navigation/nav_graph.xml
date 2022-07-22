@@ -35,7 +35,7 @@
         tools:layout="@layout/fragment_qr" />
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.diyabet.diyabetgunlugum.SplashFragment"
+        android:name="com.diyabet.diyabetgunlugum.view.fragment.SplashFragment"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" >
         <action
@@ -46,7 +46,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.diyabet.diyabetgunlugum.LoginFragment"
+        android:name="com.diyabet.diyabetgunlugum.view.fragment.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -55,7 +55,7 @@
     </fragment>
     <fragment
         android:id="@+id/recordFragment"
-        android:name="com.diyabet.diyabetgunlugum.RecordFragment"
+        android:name="com.diyabet.diyabetgunlugum.view.fragment.RecordFragment"
         android:label="fragment_record"
         tools:layout="@layout/fragment_record" >
         <action

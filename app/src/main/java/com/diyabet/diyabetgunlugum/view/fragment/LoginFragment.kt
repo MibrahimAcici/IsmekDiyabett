@@ -1,4 +1,4 @@
-package com.diyabet.diyabetgunlugum
+package com.diyabet.diyabetgunlugum.view.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.widget.doOnTextChanged
 import androidx.navigation.Navigation
+import com.diyabet.diyabetgunlugum.R
 import com.diyabet.diyabetgunlugum.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {

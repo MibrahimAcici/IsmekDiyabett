@@ -1,4 +1,4 @@
-package com.diyabet.diyabetgunlugum
+package com.diyabet.diyabetgunlugum.view.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.core.widget.doOnTextChanged
 import androidx.navigation.Navigation
+import com.diyabet.diyabetgunlugum.R
 import com.diyabet.diyabetgunlugum.databinding.FragmentRecordBinding
 
 class RecordFragment : Fragment() {
@@ -26,7 +27,8 @@ class RecordFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.apply {
             empty_text()
-            val arrayAdapter = ArrayAdapter(requireContext(),R.layout.dropdown_item,resources.getStringArray(R.array.ebeveyn))
+            val arrayAdapter = ArrayAdapter(requireContext(),
+                R.layout.dropdown_item,resources.getStringArray(R.array.ebeveyn))
             autoComplateTextView.setAdapter(arrayAdapter)
 
                 btnRecord.setOnClickListener {

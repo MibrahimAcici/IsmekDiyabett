@@ -1,4 +1,4 @@
-package com.diyabet.diyabetgunlugum
+package com.diyabet.diyabetgunlugum.view.fragment
 
 import android.os.Bundle
 import android.os.Handler
@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import androidx.navigation.Navigation
-import androidx.navigation.fragment.findNavController
+import com.diyabet.diyabetgunlugum.R
 import com.diyabet.diyabetgunlugum.databinding.FragmentSplashBinding
 
 class SplashFragment : Fragment() {
@@ -28,7 +28,7 @@ class SplashFragment : Fragment() {
         binding.apply {
 
             Handler().postDelayed({
-                imgAplicationName.animation=AnimationUtils.loadAnimation(context,R.anim.animasyon)
+                imgAplicationName.animation=AnimationUtils.loadAnimation(context, R.anim.animasyon)
                 Navigation.findNavController(view).navigate(R.id.action_splashFragment_to_loginFragment)
             },7000)
         }
