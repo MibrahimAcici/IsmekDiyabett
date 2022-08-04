@@ -6,16 +6,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.diyabet.diyabetgunlugum.databinding.FragmentAddMealBinding
+import com.diyabet.diyabetgunlugum.databinding.FragmentMealTableBinding
 
-class AddMealFragment : Fragment() {
-    private lateinit var binding: FragmentAddMealBinding
+
+class MealTableFragment : Fragment() {
+    private lateinit var binding: FragmentMealTableBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentAddMealBinding.inflate(inflater, container, false)
+        binding = FragmentMealTableBinding.inflate(inflater, container, false)
 
         return binding.root
     }

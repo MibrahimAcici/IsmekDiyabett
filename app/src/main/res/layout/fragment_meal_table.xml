@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="view.fragment.MealTableFragment">
+
+
+    <Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#75C09B"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <View
+        android:id="@+id/textView1"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:background="@drawable/ic_ogun_tablosu"
+        android:padding="5dp"
+        android:text="ÖGÜN TABLOSU"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tv_gun"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolBar">
+
+    </View>
+
+    <View
+        android:id="@+id/tv_tarih"
+        android:layout_width="142dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/rectangle2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+
+    <TextView
+        android:id="@+id/tv_gun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:background="#80FFFFFF"
+        android:text="01"
+        android:layout_marginStart="10dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="@id/tv_tarih"
+        app:layout_constraintBottom_toBottomOf="@id/tv_tarih"
+        app:layout_constraintStart_toStartOf="@+id/tv_tarih"
+
+        />
+
+    <TextView
+        android:id="@+id/tv_ay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:background="#80FFFFFF"
+        android:text="10"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="@id/tv_tarih"
+        app:layout_constraintBottom_toBottomOf="@id/tv_tarih"
+        app:layout_constraintEnd_toEndOf="@id/tv_yıl"
+        app:layout_constraintStart_toStartOf="@id/tv_gun"
+        />
+
+    <TextView
+        android:id="@+id/tv_yıl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:background="#80FFFFFF"
+        android:text="2000"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="@id/tv_tarih"
+        app:layout_constraintBottom_toBottomOf="@id/tv_tarih"
+        app:layout_constraintEnd_toEndOf="@+id/tv_tarih"
+        app:layout_constraintStart_toStartOf="@+id/tv_ay"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_öğün"
+        android:layout_width="284dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/rectangle2"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/tv_öğün2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tarih" />
+
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/rectangle3"
+        android:text="11:08"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@+id/tv_öğün"
+        app:layout_constraintStart_toStartOf="@+id/tv_öğün"
+        />
+
+    <TextView
+        android:id="@+id/tv_öğün2"
+        android:layout_width="284dp"
+        android:layout_height="46dp"
+        android:background="@drawable/rectangle2"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_öğün"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tv_öğün3"
+
+        />
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/rectangle3"
+        android:text="11:08"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@+id/tv_öğün2"
+        app:layout_constraintStart_toStartOf="@+id/tv_öğün2"
+        />
+
+    <TextView
+        android:id="@+id/tv_öğün3"
+        android:layout_width="284dp"
+        android:layout_height="106dp"
+        android:background="@drawable/rectangle2"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_öğün2"
+        app:layout_constraintBottom_toTopOf="@id/tv_öğün4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        />
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/rectangle3"
+        android:text="11:08"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@+id/tv_öğün3"
+        app:layout_constraintStart_toStartOf="@+id/tv_öğün3"
+        />
+
+    <TextView
+        android:id="@+id/tv_öğün4"
+        android:layout_width="284dp"
+        android:layout_height="45dp"
+        android:background="@drawable/rectangle2"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_öğün3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        />
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/rectangle3"
+        android:text="11:08"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@+id/tv_öğün4"
+        app:layout_constraintStart_toStartOf="@+id/tv_öğün4"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_öğün4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="20dp"
+        app:fabSize="normal"
+        android:backgroundTint="#192E35"
+        android:elevation="6dp"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

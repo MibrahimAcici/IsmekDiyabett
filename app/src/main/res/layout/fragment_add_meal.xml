@@ -1,21 +1,348 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="view.fragment.AddMealFragment">
 
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="ÖĞÜN EKLE"
-        android:textSize="50sp"
+    <View
+        android:id="@+id/textView"
+        android:layout_width="208dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ic_yeni_ogun"
         android:gravity="center"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintBottom_toBottomOf="@id/edt_yil"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="101dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/tv_yil"
+        android:layout_width="64dp"
+        android:layout_height="29dp"
+        android:layout_margin="12dp"
+        android:background="#477768"
+        android:gravity="center"
+        android:text="YIL"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/edt_yil"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/tv_ay"
+        android:layout_width="64dp"
+        android:layout_height="29dp"
+        android:layout_margin="12dp"
+        android:background="#477768"
+        android:gravity="center"
+        android:text="AY"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/edt_ay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_yil"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="120dp" />
+
+    <TextView
+        android:id="@+id/tv_gun"
+        android:layout_width="64dp"
+        android:layout_height="29dp"
+        android:layout_margin="12dp"
+        android:background="#477768"
+        android:gravity="center"
+        android:text="GÜN"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/edt_gun"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_ay"
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="165dp" />
+
+    <TextView
+        android:id="@+id/tv_saat"
+        android:layout_width="64dp"
+        android:layout_height="29dp"
+        android:layout_margin="12dp"
+        android:background="#477768"
+        android:gravity="center"
+        android:text="SAAT"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/edt_saat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_gun"
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="215dp" />
+
+    <EditText
+        android:id="@+id/edt_yil"
+        android:layout_width="261dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="25dp"
+        android:background="#192E35"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="2022"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_yil"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/edt_ay"
+        android:layout_width="261dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="25dp"
+        android:background="#192E35"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="EKİM"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_ay"
+        app:layout_constraintTop_toBottomOf="@id/edt_yil"
+        tools:layout_editor_absoluteX="139dp"
+        tools:layout_editor_absoluteY="121dp" />
+
+    <EditText
+        android:id="@+id/edt_gun"
+        android:layout_width="261dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="25dp"
+        android:background="#192E35"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="01"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_gun"
+        app:layout_constraintTop_toBottomOf="@id/edt_ay"
+        tools:layout_editor_absoluteX="133dp"
+        tools:layout_editor_absoluteY="181dp" />
+
+    <EditText
+        android:id="@+id/edt_saat"
+        android:layout_width="261dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="25dp"
+        android:background="#192E35"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="23:45"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_saat"
+        app:layout_constraintTop_toBottomOf="@id/edt_gun"
+        tools:layout_editor_absoluteX="135dp"
+        tools:layout_editor_absoluteY="236dp" />
+
+    <EditText
+        android:id="@+id/edt_1"
+        android:layout_width="330dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="65dp"
+        android:background="#192E35"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/edt_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_saat" />
+
+    <TextView
+        android:id="@+id/tv_sayi1"
+        android:layout_width="50dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="15dp"
+        android:background="#75C09B"
+        android:paddingStart="7dp"
+        android:text="1"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/edt_1"
+        app:layout_constraintTop_toTopOf="@id/edt_1">
+
+    </TextView>
+
+
+    <EditText
+        android:id="@+id/edt_2"
+        android:layout_width="330dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="20dp"
+        android:background="#192E35"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/edt_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_1" />
+
+    <TextView
+        android:id="@+id/tv_sayi2"
+        android:layout_width="50dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="15dp"
+        android:background="#75C09B"
+        android:paddingStart="7dp"
+        android:text="2"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/edt_2"
+        app:layout_constraintTop_toTopOf="@id/edt_2">
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/edt_3"
+        android:layout_width="330dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="20dp"
+        android:background="#192E35"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/edt_4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_2" />
+
+    <TextView
+        android:id="@+id/tv_sayi3"
+        android:layout_width="50dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="15dp"
+        android:background="#75C09B"
+        android:paddingStart="7dp"
+        android:text="3"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/edt_3"
+        app:layout_constraintTop_toTopOf="@id/edt_3">
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/edt_4"
+        android:layout_width="330dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="20dp"
+        android:background="#192E35"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/edt_5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_3" />
+
+    <TextView
+        android:id="@+id/tv_sayi4"
+        android:layout_width="50dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="15dp"
+        android:background="#75C09B"
+        android:paddingStart="7dp"
+        android:text="4"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/edt_4"
+        app:layout_constraintTop_toTopOf="@id/edt_4">
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/edt_5"
+        android:layout_width="330dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="20dp"
+        android:background="#192E35"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/edt_6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_4" />
+
+    <TextView
+        android:id="@+id/tv_sayi5"
+        android:layout_width="50dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="15dp"
+        android:background="#75C09B"
+        android:paddingStart="7dp"
+        android:text="5"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/edt_5"
+        app:layout_constraintTop_toTopOf="@id/edt_5">
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/edt_6"
+        android:layout_width="330dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="20dp"
+        android:background="#192E35"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_5"></EditText>
+
+    <TextView
+        android:id="@+id/tv_sayi6"
+        android:layout_width="50dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="15dp"
+        android:background="#75C09B"
+        android:paddingStart="7dp"
+        android:text="6"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/edt_6"
+        app:layout_constraintTop_toTopOf="@id/edt_6">
+
+    </TextView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="55dp"
+        android:backgroundTint="#192E35"
+        android:elevation="6dp"
+        android:src="@drawable/ic_baseline_check_24"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_6"
+
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

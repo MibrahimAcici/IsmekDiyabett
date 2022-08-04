@@ -9,7 +9,7 @@
         android:title=""
         android:icon="@drawable/data_table_icon"
         />
-    <item android:id="@+id/addMealFragment"
+    <item android:id="@+id/mealTableFragment"
         android:title=""
         android:icon="@drawable/meal_table_icon"
         />
