@@ -7,10 +7,40 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="view.fragment.DataTableFragment">
 
+    <View
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:background="#75C09B"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="29dp"
+        android:background="#273A42"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VERİ TABLOSU"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/bahnschrift"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="40dp">
+
+    </TextView>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_data_table"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="65dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"

@@ -12,6 +12,8 @@
         <entry key="..\:/Users/ibrah/AndroidStudioProjects/DiyabetGunlugum/app/src/main/res/drawable/ic_baseline_check_24.xml" value="0.1885" />
         <entry key="..\:/Users/ibrah/AndroidStudioProjects/DiyabetGunlugum/app/src/main/res/drawable/ic_data_table.xml" value="0.2775" />
         <entry key="..\:/Users/ibrah/AndroidStudioProjects/DiyabetGunlugum/app/src/main/res/drawable/ic_data_tablee.xml" value="0.2775" />
+        <entry key="..\:/Users/ibrah/AndroidStudioProjects/DiyabetGunlugum/app/src/main/res/drawable/ic_ellipse_5.xml" value="0.1275" />
+        <entry key="..\:/Users/ibrah/AndroidStudioProjects/DiyabetGunlugum/app/src/main/res/drawable/ic_ellipse_8.xml" value="0.1275" />
         <entry key="..\:/Users/ibrah/AndroidStudioProjects/DiyabetGunlugum/app/src/main/res/drawable/ic_home.xml" value="0.1" />
         <entry key="..\:/Users/ibrah/AndroidStudioProjects/DiyabetGunlugum/app/src/main/res/drawable/ic_homee.xml" value="0.1" />
         <entry key="..\:/Users/ibrah/AndroidStudioProjects/DiyabetGunlugum/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1065" />
@@ -46,18 +48,21 @@
         <entry key="..\:/Users/ibrah/AndroidStudioProjects/DiyabetGunlugum/app/src/main/res/drawable/rectangle3.xml" value="0.1865" />
         <entry key="..\:/Users/ibrah/AndroidStudioProjects/DiyabetGunlugum/app/src/main/res/drawable/shadow.xml" value="0.1" />
         <entry key="..\:/Users/ibrah/AndroidStudioProjects/DiyabetGunlugum/app/src/main/res/drawable/shadoww.xml" value="0.1" />
+        <entry key="..\:/Users/ibrah/AndroidStudioProjects/DiyabetGunlugum/app/src/main/res/font/andika_new_basic_bold.xml" value="0.15185185185185185" />
+        <entry key="..\:/Users/ibrah/AndroidStudioProjects/DiyabetGunlugum/app/src/main/res/font/bahnschrift.xml" value="0.24166666666666667" />
         <entry key="..\:/Users/ibrah/AndroidStudioProjects/DiyabetGunlugum/app/src/main/res/layout-v23/activity_main.xml" value="0.16271442986881937" />
         <entry key="..\:/Users/ibrah/AndroidStudioProjects/DiyabetGunlugum/app/src/main/res/layout-v24/activity_main.xml" value="0.16271442986881937" />
         <entry key="..\:/Users/ibrah/AndroidStudioProjects/DiyabetGunlugum/app/src/main/res/layout/activity_main.xml" value="0.10271132376395534" />
-        <entry key="..\:/Users/ibrah/AndroidStudioProjects/DiyabetGunlugum/app/src/main/res/layout/data_table_item.xml" value="0.5" />
+        <entry key="..\:/Users/ibrah/AndroidStudioProjects/DiyabetGunlugum/app/src/main/res/layout/data_table_item.xml" value="0.4722222222222222" />
+        <entry key="..\:/Users/ibrah/AndroidStudioProjects/DiyabetGunlugum/app/src/main/res/layout/data_table_itemm.xml" value="1.1" />
         <entry key="..\:/Users/ibrah/AndroidStudioProjects/DiyabetGunlugum/app/src/main/res/layout/dropdown_item.xml" value="0.3359375" />
         <entry key="..\:/Users/ibrah/AndroidStudioProjects/DiyabetGunlugum/app/src/main/res/layout/fragment_add_meal.xml" value="0.25" />
-        <entry key="..\:/Users/ibrah/AndroidStudioProjects/DiyabetGunlugum/app/src/main/res/layout/fragment_data_table.xml" value="0.1" />
-        <entry key="..\:/Users/ibrah/AndroidStudioProjects/DiyabetGunlugum/app/src/main/res/layout/fragment_home.xml" value="0.16" />
+        <entry key="..\:/Users/ibrah/AndroidStudioProjects/DiyabetGunlugum/app/src/main/res/layout/fragment_data_table.xml" value="0.25" />
+        <entry key="..\:/Users/ibrah/AndroidStudioProjects/DiyabetGunlugum/app/src/main/res/layout/fragment_home.xml" value="0.75" />
         <entry key="..\:/Users/ibrah/AndroidStudioProjects/DiyabetGunlugum/app/src/main/res/layout/fragment_login.xml" value="0.22" />
         <entry key="..\:/Users/ibrah/AndroidStudioProjects/DiyabetGunlugum/app/src/main/res/layout/fragment_meal.xml" value="0.1" />
         <entry key="..\:/Users/ibrah/AndroidStudioProjects/DiyabetGunlugum/app/src/main/res/layout/fragment_meal_table.xml" value="0.23595505617977527" />
-        <entry key="..\:/Users/ibrah/AndroidStudioProjects/DiyabetGunlugum/app/src/main/res/layout/fragment_profile.xml" value="0.75" />
+        <entry key="..\:/Users/ibrah/AndroidStudioProjects/DiyabetGunlugum/app/src/main/res/layout/fragment_profile.xml" value="0.25" />
         <entry key="..\:/Users/ibrah/AndroidStudioProjects/DiyabetGunlugum/app/src/main/res/layout/fragment_qr.xml" value="0.33" />
         <entry key="..\:/Users/ibrah/AndroidStudioProjects/DiyabetGunlugum/app/src/main/res/layout/fragment_record.xml" value="0.2175925925925926" />
         <entry key="..\:/Users/ibrah/AndroidStudioProjects/DiyabetGunlugum/app/src/main/res/layout/fragment_splash.xml" value="0.25" />
