@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/data_table_time_pick_cv"
+        android:layout_width="53dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="355dp"
+        android:backgroundTint="#273A42"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/data_table_pick_today"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/bahnschrift"
+            android:text="BUGÜN"
+            android:textAlignment="viewStart"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/data_table_pick_week"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="28dp"
+            android:fontFamily="@font/bahnschrift"
+            android:text="HAFTA"
+            android:textAlignment="viewStart"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/data_table_pick_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="53dp"
+            android:fontFamily="@font/bahnschrift"
+            android:text="AY"
+            android:textAlignment="viewStart"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/data_table_pick_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="78dp"
+            android:fontFamily="@font/bahnschrift"
+            android:text="YIL"
+            android:textAlignment="viewStart"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="53dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="25dp"
+            android:background="@color/white"></View>
+
+        <View
+            android:layout_width="53dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="50dp"
+            android:background="@color/white"></View>
+
+        <View
+            android:layout_width="53dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="75dp"
+            android:background="@color/white"></View>
+
+        <View
+            android:layout_width="53dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="25dp"
+            android:background="@color/white"></View>
+
+        <View
+            android:layout_width="53dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="25dp"
+            android:background="@color/white"></View>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
