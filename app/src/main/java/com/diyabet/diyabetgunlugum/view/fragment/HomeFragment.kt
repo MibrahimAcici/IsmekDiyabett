@@ -6,26 +6,32 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
+import androidx.navigation.fragment.findNavController
 import com.diyabet.diyabetgunlugum.R
 import com.diyabet.diyabetgunlugum.databinding.FragmentHomeBinding
+import com.diyabet.diyabetgunlugum.databinding.HomeBottomSheetBinding
 import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
 import com.github.mikephil.charting.data.LineDataSet
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter
 import com.github.mikephil.charting.utils.ColorTemplate
+import com.google.android.material.bottomsheet.BottomSheetDialog
 
 
 class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
-
+    lateinit var homeBottomSheetBinding: HomeBottomSheetBinding
+    lateinit var bottomSheet: BottomSheetDialog
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
-
+        homeBottomSheetBinding = HomeBottomSheetBinding.inflate(inflater, container, false)
+        bottomSheet = BottomSheetDialog(requireContext(), R.style.BottomSheetStyle)
+        bottomSheet.setContentView(homeBottomSheetBinding.root)
         return binding.root
     }
 
@@ -93,6 +99,20 @@ class HomeFragment : Fragment() {
             setDrawAxisLine(true)
             //granularity=4f
         }
+
+        initClickListeners()
+    }
+    private fun initClickListeners() {
+        binding.homeYeniDegerGir.setOnClickListener {
+            yeniDegerClick()
+        }
+        homeBottomSheetBinding.bottomSheetOnayla.setOnClickListener {
+            bottomSheet.dismiss()
+        }
+    }
+
+    private fun yeniDegerClick() {
+        bottomSheet.show()
     }
 
 }

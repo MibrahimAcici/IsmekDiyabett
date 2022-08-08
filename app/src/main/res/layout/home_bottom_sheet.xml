@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bottom_sheet_cv"
+        android:layout_width="203dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:layout_width="203dp"
+            android:layout_height="25dp"
+            android:background="@drawable/ic_yeni_deger_gir">
+
+        </View>
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/bottom_sheet_ort_rect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_bottom_sheet_rect"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bottom_sheet_cv" />
+
+    <ImageView
+        android:id="@+id/bottom_sheet_spm_rect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_bottom_sheet_rect"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bottom_sheet_ort_rect" />
+
+    <ImageView
+        android:id="@+id/bottom_sheet_hpr_rect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_bottom_sheet_rect"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bottom_sheet_spm_rect" />
+
+    <ImageView
+        android:id="@+id/bottom_sheet_hpo_rect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_bottom_sheet_rect"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bottom_sheet_hpr_rect" />
+
+    <ImageView
+        android:id="@+id/bottom_sheet_onayla"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_onayla"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bottom_sheet_hpo_rect" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#CCFFFFFF"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bottom_sheet_onayla"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ortalama"
+        android:fontFamily="@font/bahnschrift"
+        android:textColor="#80FFFFFF"
+        android:layout_marginStart="110dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bottom_sheet_ort_rect"
+        app:layout_constraintEnd_toEndOf="@+id/bottom_sheet_ort_rect"
+        app:layout_constraintTop_toTopOf="@+id/bottom_sheet_ort_rect"
+        app:layout_constraintStart_toStartOf="@id/bottom_sheet_ort_rect"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="sapma"
+        android:fontFamily="@font/bahnschrift"
+        android:textColor="#80FFFFFF"
+        android:layout_marginStart="110dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bottom_sheet_spm_rect"
+        app:layout_constraintEnd_toEndOf="@+id/bottom_sheet_spm_rect"
+        app:layout_constraintStart_toStartOf="@+id/bottom_sheet_spm_rect"
+        app:layout_constraintTop_toTopOf="@+id/bottom_sheet_spm_rect" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hiper"
+        android:fontFamily="@font/bahnschrift"
+        android:textColor="#80FFFFFF"
+        android:layout_marginStart="110dp"
+        app:layout_constraintStart_toStartOf="@id/bottom_sheet_hpr_rect"
+        app:layout_constraintBottom_toBottomOf="@+id/bottom_sheet_hpr_rect"
+        app:layout_constraintEnd_toEndOf="@+id/bottom_sheet_hpr_rect"
+        app:layout_constraintTop_toTopOf="@+id/bottom_sheet_hpr_rect" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:fontFamily="@font/bahnschrift"
+        android:text="hipo"
+        android:textColor="#80FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/bottom_sheet_hpo_rect"
+        app:layout_constraintEnd_toEndOf="@+id/bottom_sheet_hpo_rect"
+        app:layout_constraintStart_toStartOf="@id/bottom_sheet_hpo_rect"
+        app:layout_constraintTop_toTopOf="@+id/bottom_sheet_hpo_rect" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="115"
+        android:textColorHint="@color/white"
+        android:fontFamily="@font/bahnschrift"
+        android:textColor="#FFFFFF"
+        android:layout_marginEnd="150dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bottom_sheet_ort_rect"
+        app:layout_constraintTop_toTopOf="@+id/bottom_sheet_ort_rect"
+        app:layout_constraintStart_toStartOf="@id/bottom_sheet_ort_rect"
+        app:layout_constraintEnd_toEndOf="@id/bottom_sheet_ort_rect"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="+17"
+        android:textColorHint="@color/white"
+        android:fontFamily="@font/bahnschrift"
+        android:textColor="#FFFFFF"
+        android:layout_marginEnd="150dp"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_sheet_spm_rect"
+        app:layout_constraintTop_toTopOf="@id/bottom_sheet_spm_rect"
+        app:layout_constraintStart_toStartOf="@id/bottom_sheet_spm_rect"
+        app:layout_constraintEnd_toEndOf="@id/bottom_sheet_spm_rect"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="1"
+        android:textColorHint="@color/white"
+        android:fontFamily="@font/bahnschrift"
+        android:textColor="#FFFFFF"
+        android:layout_marginEnd="150dp"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_sheet_hpr_rect"
+        app:layout_constraintTop_toTopOf="@id/bottom_sheet_hpr_rect"
+        app:layout_constraintStart_toStartOf="@id/bottom_sheet_hpr_rect"
+        app:layout_constraintEnd_toEndOf="@id/bottom_sheet_hpr_rect"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bahnschrift"
+        android:hint="3"
+        android:textColorHint="@color/white"
+        android:textColor="#FFFFFF"
+        android:layout_marginEnd="150dp"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_sheet_hpo_rect"
+        app:layout_constraintEnd_toEndOf="@+id/bottom_sheet_hpo_rect"
+        app:layout_constraintStart_toStartOf="@id/bottom_sheet_hpo_rect"
+        app:layout_constraintTop_toTopOf="@id/bottom_sheet_hpo_rect" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
