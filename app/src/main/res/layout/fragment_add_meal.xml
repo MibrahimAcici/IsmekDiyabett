@@ -335,6 +335,7 @@
         android:layout_marginBottom="55dp"
         android:backgroundTint="#192E35"
         android:elevation="6dp"
+        app:tint="@color/white"
         android:src="@drawable/ic_baseline_check_24"
         app:fabSize="normal"
         app:layout_constraintBottom_toBottomOf="parent"
