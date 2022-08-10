@@ -22,7 +22,11 @@
         android:id="@+id/mealTableFragment"
         android:name="com.diyabet.diyabetgunlugum.view.fragment.MealTableFragment"
         android:label="fragment_meal_table"
-        tools:layout="@layout/fragment_meal_table" />
+        tools:layout="@layout/fragment_meal_table" >
+        <action
+            android:id="@+id/action_mealTableFragment_to_addMealFragment"
+            app:destination="@id/addMealFragment" />
+    </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.diyabet.diyabetgunlugum.view.fragment.ProfileFragment"
@@ -50,21 +54,25 @@
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
-            android:id="@+id/action_loginFragment_to_recordFragment"
-            app:destination="@id/recordFragment" />
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
     </fragment>
     <fragment
-        android:id="@+id/recordFragment"
-        android:name="com.diyabet.diyabetgunlugum.view.fragment.RecordFragment"
+        android:id="@+id/registerFragment"
+        android:name="com.diyabet.diyabetgunlugum.view.fragment.RegisterFragment"
         android:label="fragment_record"
-        tools:layout="@layout/fragment_record" >
+        tools:layout="@layout/fragment_register" >
         <action
-            android:id="@+id/action_recordFragment_to_loginFragment"
+            android:id="@+id/action_registerFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
     </fragment>
     <fragment
         android:id="@+id/addMealFragment"
         android:name="com.diyabet.diyabetgunlugum.view.fragment.AddMealFragment"
         android:label="fragment_add_meal"
-        tools:layout="@layout/fragment_add_meal" />
+        tools:layout="@layout/fragment_add_meal" >
+        <action
+            android:id="@+id/action_addMealFragment_to_mealTableFragment"
+            app:destination="@id/mealTableFragment" />
+    </fragment>
 </navigation>

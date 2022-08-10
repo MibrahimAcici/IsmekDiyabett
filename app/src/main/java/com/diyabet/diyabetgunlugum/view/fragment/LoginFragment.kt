@@ -25,23 +25,27 @@ class LoginFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.apply {
-                btnRecord.setOnClickListener {
-                    Navigation.findNavController(view).navigate(R.id.action_loginFragment_to_recordFragment)
+                btnRegister.setOnClickListener {
+                    val action=LoginFragmentDirections.actionLoginFragmentToRegisterFragment()
+                    Navigation.findNavController(it).navigate(action)
+                    //Navigation.findNavController(view).navigate(R.id.action_loginFragment_to_registerFragment)
                 }
-            tietEmail.doOnTextChanged { text, start, before, count ->
-                if (text!!.isEmpty()) {
-                    tilEmail.error = "Lütfen boş bırakmayınız"
-                } else {
-                    tilEmail.error = null
+
+                btnLogin.setOnClickListener {
+
+                    if (tietEmail.text!!.isEmpty()) {
+                        tilEmail.error = "Lütfen boş bırakmayınız"
+                    } else {
+                        tilEmail.error = null
+                    }
+
+                    if (tietPassword.text!!.isEmpty()) {
+                        tilPassword.error = "Lütfen boş bırakmayınız"
+                    } else {
+                        tilPassword.error = null
                 }
-            }
-            tietPassword.doOnTextChanged { text, start, before, count ->
-                if (text!!.isEmpty()) {
-                    tilPassword.error = "Lütfen boş bırakmayınız"
-                } else {
-                    tilPassword.error = null
-                }
-            }
+
+        }
         }
     }
 }

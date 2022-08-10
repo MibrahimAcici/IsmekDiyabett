@@ -9,32 +9,36 @@ import android.widget.ArrayAdapter
 import androidx.core.widget.doOnTextChanged
 import androidx.navigation.Navigation
 import com.diyabet.diyabetgunlugum.R
-import com.diyabet.diyabetgunlugum.databinding.FragmentRecordBinding
+import com.diyabet.diyabetgunlugum.databinding.FragmentRegisterBinding
 
-class RecordFragment : Fragment() {
+class RegisterFragment : Fragment() {
 
-    private lateinit var binding: FragmentRecordBinding
+    private lateinit var binding: FragmentRegisterBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding= FragmentRecordBinding.inflate(inflater,container,false)
+        binding= FragmentRegisterBinding.inflate(inflater,container,false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.apply {
-            empty_text()
             val arrayAdapter = ArrayAdapter(requireContext(),
-                R.layout.dropdown_item,resources.getStringArray(R.array.ebeveyn))
-            autoComplateTextView.setAdapter(arrayAdapter)
+                R.layout.dropdown_item,resources.getStringArray(R.array.gender))
+            tietGender.setAdapter(arrayAdapter)
 
-                btnRecord.setOnClickListener {
+                registerBtnRegister.setOnClickListener {
                     if (check_text()){
-                    Navigation.findNavController(view).navigate(R.id.action_recordFragment_to_loginFragment)
-                }
+                        val action=RegisterFragmentDirections.actionRegisterFragmentToLoginFragment()
+                        Navigation.findNavController(it).navigate(action)
+                    //Navigation.findNavController(view).navigate(R.id.action_registerFragment_to_loginFragment)
+                    }
+                    else{
+                        empty_text()
+                    }
             }
         }
     }
@@ -49,6 +53,10 @@ class RecordFragment : Fragment() {
                 tietSurname.error = "Lütfen boş bırakmayınız"
                 isEmpty = false
             }
+            if (tietNumber.text!!.isEmpty()) {
+                tietNumber.error = "Lütfen boş bırakmayınız"
+                isEmpty = false
+            }
             if (tietEmail.text!!.isEmpty()) {
                 tietEmail.error = "Lütfen boş bırakmayınız"
                 isEmpty = false
@@ -60,6 +68,18 @@ class RecordFragment : Fragment() {
             if (tietPassword.text!!.isEmpty()) {
                 tilPassword.endIconDrawable = null
                 tietPassword.error = "Lütfen boş bırakmayınız"
+                isEmpty = false
+            }
+            if (tietDate.text!!.isEmpty()) {
+                tietDate.error = "Lütfen boş bırakmayınız"
+                isEmpty = false
+            }
+            if (tietHeight.text!!.isEmpty()) {
+                tietHeight.error = "Lütfen boş bırakmayınız"
+                isEmpty = false
+            }
+            if (tietWeight.text!!.isEmpty()) {
+                tietWeight.error = "Lütfen boş bırakmayınız"
                 isEmpty = false
             }
         }
@@ -83,6 +103,12 @@ class RecordFragment : Fragment() {
                     control = false
                 }
             }
+            tietNumber.doOnTextChanged { text, start, before, count ->
+                if (text!!.isEmpty()) {
+                    tilNumber.error = "Lütfen boş bırakmayınız"
+                    control = false
+                }
+            }
             tietEmail.doOnTextChanged { text, start, before, count ->
                 if (text!!.isEmpty()) {
                     tilEmail.error = "Lütfen boş bırakmayınız"
@@ -92,6 +118,24 @@ class RecordFragment : Fragment() {
             tietPassword.doOnTextChanged { text, start, before, count ->
                 if (text!!.isEmpty()) {
                     tilPassword.error = "Lütfen boş bırakmayınız"
+                    control = false
+                }
+            }
+            tietDate.doOnTextChanged { text, start, before, count ->
+                if (text!!.isEmpty()) {
+                    tilDate.error = "Lütfen boş bırakmayınız"
+                    control = false
+                }
+            }
+            tietHeight.doOnTextChanged { text, start, before, count ->
+                if (text!!.isEmpty()) {
+                    tilHeight.error = "Lütfen boş bırakmayınız"
+                    control = false
+                }
+            }
+            tietWeight.doOnTextChanged { text, start, before, count ->
+                if (text!!.isEmpty()) {
+                    tilWeight.error = "Lütfen boş bırakmayınız"
                     control = false
                 }
             }

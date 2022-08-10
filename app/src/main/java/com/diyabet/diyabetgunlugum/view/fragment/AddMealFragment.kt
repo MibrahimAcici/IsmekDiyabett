@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import com.diyabet.diyabetgunlugum.databinding.FragmentAddMealBinding
 
 class AddMealFragment : Fragment() {
@@ -23,5 +24,9 @@ class AddMealFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.addMealFab.setOnClickListener {
+            val action=AddMealFragmentDirections.actionAddMealFragmentToMealTableFragment()
+            Navigation.findNavController(it).navigate(action)
+        }
     }
 }
