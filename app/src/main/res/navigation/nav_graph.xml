@@ -74,5 +74,17 @@
         <action
             android:id="@+id/action_addMealFragment_to_mealTableFragment"
             app:destination="@id/mealTableFragment" />
+        <action
+            android:id="@+id/action_addMealFragment_to_timePickerFragment"
+            app:destination="@id/timePickerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/timePickerFragment"
+        android:name="com.diyabet.diyabetgunlugum.view.fragment.TimePickerFragment"
+        android:label="fragment_time_picker"
+        tools:layout="@layout/fragment_time_picker" >
+        <action
+            android:id="@+id/action_timePickerFragment_to_addMealFragment"
+            app:destination="@id/addMealFragment" />
     </fragment>
 </navigation>

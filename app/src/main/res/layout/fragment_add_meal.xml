@@ -6,164 +6,85 @@
     android:layout_height="match_parent"
     tools:context="view.fragment.AddMealFragment">
 
-
     <View
-        android:id="@+id/textView"
+        android:id="@+id/tv_newMeal"
         android:layout_width="208dp"
         android:layout_height="40dp"
-        android:background="@drawable/ic_yeni_ogun"
-        android:gravity="center"
-
-        app:layout_constraintBottom_toBottomOf="@id/edt_yil"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="101dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="YENİ ÖĞÜN"
+        android:background="@drawable/ic_yeni_ogun"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:layout_marginTop="24dp">
+    </View>
+    <Button
+        android:id="@+id/btn_timePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tarih seçiniz"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_newMeal"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#477768" />
 
     <TextView
-        android:id="@+id/tv_yil"
-        android:layout_width="64dp"
-        android:layout_height="29dp"
-        android:layout_margin="12dp"
-        android:background="#477768"
-        android:gravity="center"
-        android:text="YIL"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@id/edt_yil"
+        android:id="@+id/tv_textTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <TextView
-        android:id="@+id/tv_ay"
-        android:layout_width="64dp"
-        android:layout_height="29dp"
-        android:layout_margin="12dp"
-        android:background="#477768"
-        android:gravity="center"
-        android:text="AY"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_timePicker"
+        app:layout_constraintBottom_toTopOf="@id/btn_timePicker2"
+        android:textColor="#000000"
+        android:textSize="22sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@id/edt_ay"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_yil"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="120dp" />
+        android:text="16-06-2020"/>
 
-    <TextView
-        android:id="@+id/tv_gun"
-        android:layout_width="64dp"
-        android:layout_height="29dp"
-        android:layout_margin="12dp"
-        android:background="#477768"
-        android:gravity="center"
-        android:text="GÜN"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@id/edt_gun"
+    <Button
+        android:id="@+id/btn_timePicker2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Saat seçiniz"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_ay"
-        tools:layout_editor_absoluteX="36dp"
-        tools:layout_editor_absoluteY="165dp" />
-
-    <TextView
-        android:id="@+id/tv_saat"
-        android:layout_width="64dp"
-        android:layout_height="29dp"
-        android:layout_margin="12dp"
-        android:background="#477768"
-        android:gravity="center"
-        android:text="SAAT"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@id/edt_saat"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_gun"
-        tools:layout_editor_absoluteX="36dp"
-        tools:layout_editor_absoluteY="215dp" />
-
-    <EditText
-        android:id="@+id/edt_yil"
-        android:layout_width="261dp"
-        android:layout_height="29dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_textTime"
+        app:layout_constraintBottom_toTopOf="@id/tv_timePicker"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="25dp"
-        android:background="#192E35"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="2022"
-        android:textAlignment="textStart"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tv_yil"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        android:backgroundTint="#477768" />
 
-    <EditText
-        android:id="@+id/edt_ay"
-        android:layout_width="261dp"
-        android:layout_height="29dp"
-        android:layout_marginTop="13dp"
-        android:layout_marginEnd="25dp"
-        android:background="#192E35"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="EKİM"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/tv_ay"
-        app:layout_constraintTop_toBottomOf="@id/edt_yil"
-        tools:layout_editor_absoluteX="139dp"
-        tools:layout_editor_absoluteY="121dp" />
 
-    <EditText
-        android:id="@+id/edt_gun"
-        android:layout_width="261dp"
-        android:layout_height="29dp"
-        android:layout_marginTop="13dp"
-        android:layout_marginEnd="25dp"
-        android:background="#192E35"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="01"
-        android:textColor="@color/white"
+    <TextView
+        android:id="@+id/tv_timePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btn_timePicker2"
+        app:layout_constraintBottom_toTopOf="@id/edt_1"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/tv_gun"
-        app:layout_constraintTop_toBottomOf="@id/edt_ay"
-        tools:layout_editor_absoluteX="133dp"
-        tools:layout_editor_absoluteY="181dp" />
+        android:text="Saat : "
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:layout_marginBottom="28dp">
+    </TextView>
 
-    <EditText
-        android:id="@+id/edt_saat"
-        android:layout_width="261dp"
-        android:layout_height="29dp"
-        android:layout_marginTop="13dp"
-        android:layout_marginEnd="25dp"
-        android:background="#192E35"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="23:45"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/tv_saat"
-        app:layout_constraintTop_toBottomOf="@id/edt_gun"
-        tools:layout_editor_absoluteX="135dp"
-        tools:layout_editor_absoluteY="236dp" />
 
     <EditText
         android:id="@+id/edt_1"
         android:layout_width="330dp"
         android:layout_height="29dp"
-        android:layout_marginTop="65dp"
         android:background="#192E35"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@id/edt_2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_saat" />
+        app:layout_constraintTop_toBottomOf="@id/tv_timePicker"
+
+        />
 
     <TextView
         android:id="@+id/tv_sayi1"
@@ -187,7 +108,7 @@
         android:id="@+id/edt_2"
         android:layout_width="330dp"
         android:layout_height="29dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:background="#192E35"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@id/edt_3"
@@ -216,7 +137,7 @@
         android:id="@+id/edt_3"
         android:layout_width="330dp"
         android:layout_height="29dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:background="#192E35"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@id/edt_4"
@@ -245,7 +166,7 @@
         android:id="@+id/edt_4"
         android:layout_width="330dp"
         android:layout_height="29dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:background="#192E35"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@id/edt_5"
@@ -274,13 +195,14 @@
         android:id="@+id/edt_5"
         android:layout_width="330dp"
         android:layout_height="29dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:background="#192E35"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@id/edt_6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edt_4" />
+        app:layout_constraintTop_toBottomOf="@id/edt_4"
+        />
 
     <TextView
         android:id="@+id/tv_sayi5"
@@ -298,17 +220,18 @@
         app:layout_constraintTop_toTopOf="@id/edt_5">
 
     </TextView>
-
     <EditText
         android:id="@+id/edt_6"
         android:layout_width="330dp"
         android:layout_height="29dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:background="#192E35"
         android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/add_meal_fab"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edt_5"></EditText>
+        app:layout_constraintTop_toBottomOf="@id/edt_5"
+        />
 
     <TextView
         android:id="@+id/tv_sayi6"
@@ -327,12 +250,12 @@
 
     </TextView>
 
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/add_meal_fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="55dp"
+        android:layout_marginBottom="20dp"
         android:backgroundTint="#192E35"
         android:elevation="6dp"
         app:tint="@color/white"
