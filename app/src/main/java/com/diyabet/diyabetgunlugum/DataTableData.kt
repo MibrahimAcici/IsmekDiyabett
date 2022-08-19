@@ -1,6 +1,6 @@
 package com.diyabet.diyabetgunlugum
 
-data class Data(
+data class DataTableData(
 
     var saat: String,
     var ortalama: String,

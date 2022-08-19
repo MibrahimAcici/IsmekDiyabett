@@ -3,14 +3,14 @@ package com.diyabet.diyabetgunlugum.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.diyabet.diyabetgunlugum.Data
+import com.diyabet.diyabetgunlugum.DataTableData
 import com.diyabet.diyabetgunlugum.databinding.DataTableItemBinding
 
 class DataTableAdapter(): RecyclerView.Adapter<DataTableAdapter.DataTableVH>() {
 
-    private  val dataset:ArrayList<Data> = arrayListOf()
+    private  val dataset:ArrayList<DataTableData> = arrayListOf()
 
-    fun setList(dataset:List<Data>) {
+    fun setList(dataset:List<DataTableData>) {
         this.dataset.clear()
         this.dataset.addAll(dataset)
         notifyDataSetChanged()
