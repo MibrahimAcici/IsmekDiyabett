@@ -61,6 +61,45 @@
         app:layout_constraintTop_toBottomOf="@id/tabLayout" />
 
     <View
+        android:id="@+id/table_average_circle"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ic_table_average"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="@id/lineChart"
+        app:layout_constraintTop_toTopOf="@id/lineChart">
+    </View>
+
+    <TextView
+        android:id="@+id/table_average_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5,7"
+        android:fontFamily="@font/bahnschrift"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="@+id/table_average_circle"
+        app:layout_constraintStart_toStartOf="@+id/table_average_circle"
+        app:layout_constraintEnd_toEndOf="@+id/table_average_circle"
+        app:layout_constraintBottom_toBottomOf="@+id/table_average_circle">
+    </TextView>
+
+    <TextView
+        android:id="@+id/table_average_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Günlük Ortalama"
+        android:fontFamily="@font/bahnschrift"
+        android:textColor="@color/white"
+        android:textSize="8sp"
+        app:layout_constraintStart_toStartOf="@+id/table_average_circle"
+        app:layout_constraintEnd_toEndOf="@+id/table_average_circle"
+        app:layout_constraintTop_toBottomOf="@+id/table_average_circle">
+
+    </TextView>
+
+    <View
         android:id="@+id/view_daily_icon"
         android:layout_width="105dp"
         android:layout_height="115dp"
