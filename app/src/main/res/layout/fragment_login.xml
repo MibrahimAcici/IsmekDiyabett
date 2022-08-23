@@ -63,8 +63,7 @@
         app:layout_constraintTop_toBottomOf="@id/til_email"
         app:startIconDrawable="@drawable/lock_icon"
         app:counterEnabled="true"
-        app:counterMaxLength="20"
-        >
+        app:counterMaxLength="20">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/tiet_password"
@@ -82,30 +81,31 @@
         android:id="@+id/btn_login"
         android:layout_width="160dp"
         android:layout_height="45dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/ic_button_selected"
         android:fontFamily="@font/bahnschrift"
-        app:layout_constraintTop_toBottomOf="@id/til_password"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp"
-        android:textColor="@color/black"
         android:text="Giriş Yap"
+        android:textColor="@color/black"
         android:textSize="18sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_marginStart="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_password" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_register"
-        android:layout_width="280dp"
+        android:layout_width="160dp"
         android:layout_height="45dp"
-        android:layout_marginTop="136dp"
         android:background="@drawable/ic_button_selected"
         android:fontFamily="@font/bahnschrift"
-        android:text="Yeni Kayıt Oluşturmak İçin Tıklayın"
+        android:text="KAYIT OL"
         android:textColor="@color/black"
+        android:textSize="18sp"
         android:textStyle="bold"
-        android:layout_marginBottom="30dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+
+        app:layout_constraintTop_toBottomOf="@+id/til_password" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

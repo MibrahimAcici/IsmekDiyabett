@@ -8,8 +8,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/bottom_sheet_cv"
-        android:layout_width="203dp"
-        android:layout_height="25dp"
+        android:layout_width="300dp"
+        android:layout_height="35dp"
         android:layout_marginTop="20dp"
         app:cardCornerRadius="6dp"
         app:cardElevation="8dp"
@@ -18,8 +18,8 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <View
-            android:layout_width="203dp"
-            android:layout_height="25dp"
+            android:layout_width="300dp"
+            android:layout_height="35dp"
             android:background="@drawable/ic_yeni_deger_gir">
 
         </View>
@@ -27,8 +27,8 @@
 
     <ImageView
         android:id="@+id/bottom_sheet_ort_rect"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="35dp"
         android:background="@drawable/ic_bottom_sheet_rect"
         android:layout_marginTop="25dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -37,8 +37,8 @@
 
     <ImageView
         android:id="@+id/bottom_sheet_spm_rect"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="35dp"
         android:background="@drawable/ic_bottom_sheet_rect"
         android:layout_marginTop="25dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -47,8 +47,8 @@
 
     <ImageView
         android:id="@+id/bottom_sheet_hpr_rect"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="35dp"
         android:background="@drawable/ic_bottom_sheet_rect"
         android:layout_marginTop="25dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -57,8 +57,8 @@
 
     <ImageView
         android:id="@+id/bottom_sheet_hpo_rect"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="35dp"
         android:background="@drawable/ic_bottom_sheet_rect"
         android:layout_marginTop="25dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -67,11 +67,12 @@
 
     <ImageView
         android:id="@+id/bottom_sheet_onayla"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/ic_onayla"
-        android:layout_marginTop="25dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bottom_sheet_hpo_rect" />
 
@@ -90,11 +91,12 @@
         android:text="ortalama"
         android:fontFamily="@font/bahnschrift"
         android:textColor="#80FFFFFF"
-        android:layout_marginStart="110dp"
+        android:textSize="20sp"
+        android:layout_marginEnd="10dp"
         app:layout_constraintBottom_toBottomOf="@+id/bottom_sheet_ort_rect"
         app:layout_constraintEnd_toEndOf="@+id/bottom_sheet_ort_rect"
         app:layout_constraintTop_toTopOf="@+id/bottom_sheet_ort_rect"
-        app:layout_constraintStart_toStartOf="@id/bottom_sheet_ort_rect"/>
+        />
 
     <TextView
         android:layout_width="wrap_content"
@@ -102,10 +104,10 @@
         android:text="sapma"
         android:fontFamily="@font/bahnschrift"
         android:textColor="#80FFFFFF"
-        android:layout_marginStart="110dp"
+        android:textSize="20sp"
+        android:layout_marginEnd="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/bottom_sheet_spm_rect"
         app:layout_constraintEnd_toEndOf="@+id/bottom_sheet_spm_rect"
-        app:layout_constraintStart_toStartOf="@+id/bottom_sheet_spm_rect"
         app:layout_constraintTop_toTopOf="@+id/bottom_sheet_spm_rect" />
 
     <TextView
@@ -114,8 +116,8 @@
         android:text="hiper"
         android:fontFamily="@font/bahnschrift"
         android:textColor="#80FFFFFF"
-        android:layout_marginStart="110dp"
-        app:layout_constraintStart_toStartOf="@id/bottom_sheet_hpr_rect"
+        android:textSize="20sp"
+        android:layout_marginEnd="28dp"
         app:layout_constraintBottom_toBottomOf="@+id/bottom_sheet_hpr_rect"
         app:layout_constraintEnd_toEndOf="@+id/bottom_sheet_hpr_rect"
         app:layout_constraintTop_toTopOf="@+id/bottom_sheet_hpr_rect" />
@@ -123,13 +125,13 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="110dp"
+        android:textSize="20sp"
         android:fontFamily="@font/bahnschrift"
         android:text="hipo"
         android:textColor="#80FFFFFF"
+        android:layout_marginEnd="32dp"
         app:layout_constraintBottom_toBottomOf="@+id/bottom_sheet_hpo_rect"
         app:layout_constraintEnd_toEndOf="@+id/bottom_sheet_hpo_rect"
-        app:layout_constraintStart_toStartOf="@id/bottom_sheet_hpo_rect"
         app:layout_constraintTop_toTopOf="@+id/bottom_sheet_hpo_rect" />
 
     <EditText
@@ -141,11 +143,12 @@
         android:textColorHint="@color/white"
         android:fontFamily="@font/bahnschrift"
         android:textColor="#FFFFFF"
-        android:layout_marginEnd="150dp"
+        android:textSize="25sp"
+        android:layout_marginStart="25dp"
         app:layout_constraintBottom_toBottomOf="@+id/bottom_sheet_ort_rect"
         app:layout_constraintTop_toTopOf="@+id/bottom_sheet_ort_rect"
         app:layout_constraintStart_toStartOf="@id/bottom_sheet_ort_rect"
-        app:layout_constraintEnd_toEndOf="@id/bottom_sheet_ort_rect"/>
+        />
 
     <EditText
         android:layout_width="wrap_content"
@@ -155,39 +158,39 @@
         android:textColorHint="@color/white"
         android:fontFamily="@font/bahnschrift"
         android:textColor="#FFFFFF"
-        android:layout_marginEnd="150dp"
+        android:textSize="25sp"
+        android:layout_marginStart="20dp"
         app:layout_constraintBottom_toBottomOf="@id/bottom_sheet_spm_rect"
         app:layout_constraintTop_toTopOf="@id/bottom_sheet_spm_rect"
-        app:layout_constraintStart_toStartOf="@id/bottom_sheet_spm_rect"
-        app:layout_constraintEnd_toEndOf="@id/bottom_sheet_spm_rect"/>
+        app:layout_constraintStart_toStartOf="@id/bottom_sheet_spm_rect" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="1"
-        android:maxLength="2"
+        android:maxLength="1"
         android:inputType="number"
         android:textColorHint="@color/white"
         android:fontFamily="@font/bahnschrift"
         android:textColor="#FFFFFF"
-        android:layout_marginEnd="150dp"
+        android:textSize="25sp"
+        android:layout_marginStart="35dp"
         app:layout_constraintBottom_toBottomOf="@id/bottom_sheet_hpr_rect"
         app:layout_constraintTop_toTopOf="@id/bottom_sheet_hpr_rect"
-        app:layout_constraintStart_toStartOf="@id/bottom_sheet_hpr_rect"
-        app:layout_constraintEnd_toEndOf="@id/bottom_sheet_hpr_rect"/>
+        app:layout_constraintStart_toStartOf="@id/bottom_sheet_hpr_rect" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/bahnschrift"
         android:hint="3"
-        android:maxLength="2"
+        android:maxLength="1"
         android:inputType="number"
         android:textColorHint="@color/white"
         android:textColor="#FFFFFF"
-        android:layout_marginEnd="150dp"
+        android:textSize="25sp"
+        android:layout_marginStart="35dp"
         app:layout_constraintBottom_toBottomOf="@id/bottom_sheet_hpo_rect"
-        app:layout_constraintEnd_toEndOf="@+id/bottom_sheet_hpo_rect"
         app:layout_constraintStart_toStartOf="@id/bottom_sheet_hpo_rect"
         app:layout_constraintTop_toTopOf="@id/bottom_sheet_hpo_rect" />
 
