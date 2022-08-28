@@ -51,7 +51,7 @@ class AddMealFragment : Fragment() {
             }
         }
 
-        binding.addMealFab.setOnClickListener {
+        binding.btnMealRegister.setOnClickListener {
             val action=AddMealFragmentDirections.actionAddMealFragmentToMealTableFragment()
             Navigation.findNavController(it).navigate(action)
         }
