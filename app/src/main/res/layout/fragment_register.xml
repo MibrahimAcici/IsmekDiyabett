@@ -7,256 +7,283 @@
     android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".view.fragment.RegisterFragment">
-
-
-
-    <ImageView
-        android:id="@+id/img_logo"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/logo_picture"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent"
+        tools:context=".view.fragment.RegisterFragment">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_name"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_top"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
-        android:hint="Adınızı Giriniz"
-        app:endIconMode="clear_text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/img_logo">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/tiet_name"
+        <Toolbar
+            android:id="@+id/register_toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/bahnschrift"
-            android:textStyle="bold"
-            android:inputType="text"
-            android:textSize="15dp"/>
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_margin="4dp"
+            android:background="@drawable/toolbar_rect"
+            android:padding="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" >
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_surname"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:hint="Soyadınızı Giriniz"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/til_name"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
-        app:endIconMode="clear_text"
-        >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="KAYIT OL"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/bahnschrift"
+                android:textColor="@color/white"
+                android:layout_gravity="center">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/tiet_surname"
+            </TextView>
+
+            <ImageView
+                android:id="@+id/img_back_key"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </Toolbar>
+
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/bahnschrift"
-            android:inputType="text"
-            android:textStyle="bold"
-            android:textSize="15dp"/>
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="@dimen/margin_top"
+            android:layout_marginEnd="40dp"
+            android:hint="Adınızı Giriniz"
+            app:endIconMode="clear_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/register_toolbar">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tiet_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bahnschrift"
+                android:inputType="text"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_surname"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="40dp"
+            android:hint="Soyadınızı Giriniz"
+            app:endIconMode="clear_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/til_name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tiet_surname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bahnschrift"
+                android:inputType="text"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_number"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
             android:layout_marginTop="20dp"
+            android:layout_marginEnd="40dp"
             android:hint="Telefon Numaranızı Giriniz"
+            app:endIconMode="clear_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/til_surname"
-            android:layout_marginStart="40dp"
-            android:layout_marginEnd="40dp"
-            app:endIconMode="clear_text"
-            >
+            app:layout_constraintTop_toBottomOf="@id/til_surname">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/tiet_number"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/bahnschrift"
-                android:textStyle="bold"
                 android:inputType="number"
-                android:textSize="15dp"/>
+                android:textSize="15dp"
+                android:textStyle="bold" />
         </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_email"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
-        android:hint="Eposta Adresinizi Giriniz"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/til_number"
-        app:endIconMode="clear_text"
-        >
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/tiet_email"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_email"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/bahnschrift"
-            android:textSize="15dp"/>
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="40dp"
+            android:hint="Eposta Adresinizi Giriniz"
+            app:endIconMode="clear_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/til_number">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_password"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
-        android:hint="Şifrenizi Giriniz"
-        app:endIconMode="password_toggle"
-        app:hintAnimationEnabled="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/til_email"
-        app:counterEnabled="true"
-        app:counterMaxLength="20"
-        >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tiet_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bahnschrift"
+                android:inputType="text"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/tiet_password"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_password"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/bahnschrift"
-            android:inputType="textPassword"
-            android:textSize="15dp"
-            android:maxLength="20"
-            />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="40dp"
+            android:hint="Şifrenizi Giriniz"
+            app:counterEnabled="true"
+            app:counterMaxLength="20"
+            app:endIconMode="password_toggle"
+            app:hintAnimationEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/til_email">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tiet_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bahnschrift"
+                android:inputType="textPassword"
+                android:maxLength="20"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_date"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Doğum Tarihinizi Giriniz"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/til_password"
             android:layout_marginStart="40dp"
             android:layout_marginEnd="40dp"
+            android:hint="Doğum Tarihinizi Giriniz"
             app:endIconMode="clear_text"
-            >
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/til_password">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/tiet_date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/bahnschrift"
-                android:textStyle="bold"
-                android:textSize="15dp"/>
+                android:inputType="text"
+                android:textSize="15dp"
+                android:textStyle="bold" />
         </com.google.android.material.textfield.TextInputLayout>
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/register_btn_register"
-        android:layout_width="160dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/ic_button_selected"
-        android:fontFamily="@font/bahnschrift"
-        android:text="Kayıt Ol"
-        android:textStyle="bold"
-        android:textSize="18sp"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/til_height" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_gender"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-        android:layout_width="110dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/til_date">
-
-        <AutoCompleteTextView
-            android:id="@+id/tiet_gender"
-            android:layout_width="110dp"
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/register_btn_register"
+            android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:inputType="none"
-            android:text="Erkek"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/ic_button_selected"
             android:fontFamily="@font/bahnschrift"
-            tools:ignore="TouchTargetSizeCheck"
-            android:textSize="15dp"
-            android:textColor="#9C000000"
-            />
+            android:text="Kayıt Ol"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/til_height" />
 
-    </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_gender"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/til_date">
+
+            <AutoCompleteTextView
+                android:id="@+id/tiet_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bahnschrift"
+                android:inputType="none"
+                android:text="Erkek"
+                android:textColor="#9C000000"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_height"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="110dp"
+            android:layout_width="0dp"
             android:layout_height="55dp"
+            android:layout_marginStart="40dp"
             android:layout_marginTop="20dp"
             android:hint="Boy"
-            android:layout_marginStart="10dp"
-            app:layout_constraintStart_toEndOf="@id/til_gender"
-            app:layout_constraintTop_toBottomOf="@id/til_date"
             app:endIconMode="clear_text"
-            >
+            app:layout_constraintEnd_toStartOf="@id/til_weight"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/til_gender">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/tiet_height"
-                android:layout_width="110dp"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:fontFamily="@font/bahnschrift"
-                android:textStyle="bold"
                 android:inputType="number"
-                android:textSize="15dp"/>
+                android:textSize="15dp"
+                android:textStyle="bold" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_weight"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="110dp"
+            android:layout_width="0dp"
             android:layout_height="55dp"
+            android:layout_marginStart="5dp"
             android:layout_marginTop="20dp"
+            android:layout_marginEnd="40dp"
             android:hint="Kilo"
-            android:layout_marginStart="10dp"
-            app:layout_constraintStart_toEndOf="@id/til_height"
-            app:layout_constraintTop_toBottomOf="@id/til_date"
             app:endIconMode="clear_text"
-            >
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/til_height"
+            app:layout_constraintTop_toBottomOf="@id/til_gender">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/tiet_weight"
-                android:layout_width="110dp"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:fontFamily="@font/bahnschrift"
-                android:textStyle="bold"
                 android:inputType="number"
-                android:textSize="15dp"/>
+                android:textSize="15dp"
+                android:textStyle="bold" />
         </com.google.android.material.textfield.TextInputLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

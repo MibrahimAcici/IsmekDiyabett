@@ -36,16 +36,37 @@ class MealTableFragment : Fragment() {
         dataList.add(MealTableData("15.07","bir avuç ceviz"))
         dataList.add(MealTableData("19.00","bir kase çorba ve sebze yemeği"))
         dataList.add(MealTableData("21.00","3 dilim meyve"))
-
+/*
         binding.rvMealTable.layoutManager = LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false)
         binding.rvMealTable.adapter = mealTableAdapter
 
         mealTableAdapter.setList(dataList)
-
+*/
 
         binding.mealTableFab.setOnClickListener {
             val action=MealTableFragmentDirections.actionMealTableFragmentToAddMealFragment()
             Navigation.findNavController(it).navigate(action)
+        }
+
+        binding.apply {
+            mealTableDate.setOnClickListener{
+
+                val datePickerFragment = DatePickerFragment()
+                val supportFragmentManager = requireActivity().supportFragmentManager
+
+                supportFragmentManager.setFragmentResultListener(
+                    "REQUEST_KEY",
+                    viewLifecycleOwner
+                ) { resultKey, bundle ->
+                    if (resultKey == "REQUEST_KEY") {
+                        val date = bundle.getString("SELECTED_DATE")
+                        mealTableDate.text = "$date"
+
+                    }
+                }
+                datePickerFragment.show(supportFragmentManager, "DatePickerFragment")
+
+            }
         }
 
     }

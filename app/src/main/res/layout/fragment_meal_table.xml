@@ -1,123 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="view.fragment.MealTableFragment">
 
     <Toolbar
-        android:id="@+id/toolBar"
+        android:id="@+id/meal_table_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#75C09B"
+        android:layout_margin="4dp"
+        android:background="@drawable/toolbar_rect"
+        android:padding="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ÖĞÜN TABLOSU"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/bahnschrift"
+            android:textColor="@color/white"
+            android:layout_gravity="center">
+        </TextView>
+    </Toolbar>
+
+    <TextView
+        android:id="@+id/meal_table_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="01.01.2022"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:fontFamily="@font/bahnschrift"
+        android:background="@drawable/toolbar_rect"
+        android:padding="10dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/meal_table_toolbar">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/meal_table_warning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Herhangi bir öğün eklenmemiştir."
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:fontFamily="@font/bahnschrift"
+        android:padding="10dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </TextView>
 
 
     <View
-        android:id="@+id/textView1"
-        android:layout_width="300dp"
-        android:layout_height="55dp"
-        android:background="@drawable/ic_ogun_tablosu"
-        android:padding="5dp"
-        android:text="ÖGÜN TABLOSU"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/tv_gun"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        android:layout_width="match_parent"
+        android:layout_height="750dp"
+        android:background="@color/white"
+        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolBar">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
 
     </View>
-
-    <View
-        android:id="@+id/tv_tarih"
-        android:layout_width="142dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="18dp"
-        android:background="@drawable/rectangle2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView1" />
-
-
-    <TextView
-        android:id="@+id/tv_gun"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="6dp"
-        android:background="#80FFFFFF"
-        android:text="01"
-        android:layout_marginStart="10dp"
-        android:textStyle="bold"
-        android:textAlignment="center"
-        android:gravity="center"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        app:layout_constraintTop_toTopOf="@id/tv_tarih"
-        app:layout_constraintBottom_toBottomOf="@id/tv_tarih"
-        app:layout_constraintStart_toStartOf="@+id/tv_tarih"
-
-        />
-
-    <TextView
-        android:id="@+id/tv_ay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="10dp"
-        android:background="#80FFFFFF"
-        android:text="10"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        app:layout_constraintTop_toTopOf="@id/tv_tarih"
-        app:layout_constraintBottom_toBottomOf="@id/tv_tarih"
-        app:layout_constraintEnd_toEndOf="@id/tv_yıl"
-        app:layout_constraintStart_toStartOf="@id/tv_gun"
-        />
-
-    <TextView
-        android:id="@+id/tv_yıl"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:background="#80FFFFFF"
-        android:text="2000"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        app:layout_constraintTop_toTopOf="@id/tv_tarih"
-        app:layout_constraintBottom_toBottomOf="@id/tv_tarih"
-        app:layout_constraintEnd_toEndOf="@+id/tv_tarih"
-        app:layout_constraintStart_toStartOf="@+id/tv_ay"
-        />
-
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_mealTable"
-        android:layout_width="match_parent"
-        android:layout_height="400dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_tarih"
-        app:layout_constraintBottom_toTopOf="@id/meal_table_fab">
-
-    </androidx.recyclerview.widget.RecyclerView>
-
-
-
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/meal_table_fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/rv_mealTable"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginEnd="20dp"
@@ -126,8 +90,8 @@
         android:src="@drawable/ic_baseline_add_24"
         app:tint="@color/white"
         android:backgroundTint="#192E35"
-        android:elevation="6dp"
-        />
+        android:elevation="6dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

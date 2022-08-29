@@ -11,21 +11,30 @@
         android:layout_height="match_parent"
         tools:context="view.fragment.AddMealFragment">
 
+
         <Toolbar
             android:id="@+id/tv_newMeal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
-            android:background="@drawable/ic_yeni_ogun"
+            android:background="@drawable/toolbar_rect"
             android:padding="4dp"
-            android:text="YENİ ÖĞÜN"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent" >
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="YENİ ÖĞÜN"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/bahnschrift"
+                android:textColor="@color/white"
+                android:layout_gravity="center">
+
+            </TextView>
+        </Toolbar>
         <Button
             android:id="@+id/btn_timePicker"
             android:layout_width="wrap_content"
