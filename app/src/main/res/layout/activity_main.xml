@@ -1,57 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     tools:context=".MainActivity">
 
-
-    <fragment
-        android:id="@+id/host_fragment"
-        android:name="androidx.navigation.fragment.NavHostFragment"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:defaultNavHost="true"
-        app:navGraph="@navigation/nav_graph"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/btm_nav">
-    </fragment>
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/btm_nav"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="43dp"
-        app:menu="@menu/nav_menu"
+        android:layout_height="wrap_content">
 
+        <fragment
+            android:id="@+id/host_fragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:defaultNavHost="true"
+            app:layout_constraintBottom_toTopOf="@id/btm_nav"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navGraph="@navigation/nav_graph">
+        </fragment>
 
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/btm_nav"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/navbar_backgound"
+            android:paddingStart="-35dp"
+            android:paddingEnd="0dp"
+            app:itemIconSize="52dp"
+            app:itemPaddingBottom="0dp"
+            app:itemPaddingTop="0dp"
+            app:labelVisibilityMode="unlabeled"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/host_fragment"
+            app:menu="@menu/nav_menu"
+            tools:ignore="RtlSymmetry">
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
 
-
-        app:labelVisibilityMode="unlabeled"
-        android:background="@drawable/navbar_backgound"
-
-        android:paddingStart="-35dp"
-        android:paddingEnd="0dp"
-
-        app:itemIconSize="52dp"
-        app:itemPaddingTop="0dp"
-        app:itemPaddingBottom="0dp"
-
-        android:layout_marginLeft="7dp"
-        android:layout_marginRight="7dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/host_fragment"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="RtlSymmetry">
-
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

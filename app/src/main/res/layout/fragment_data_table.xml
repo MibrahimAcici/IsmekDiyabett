@@ -1,92 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true"
     tools:context="view.fragment.DataTableFragment">
 
-    <View
-        android:layout_width="0dp"
-        android:layout_height="36dp"
-        android:background="#75C09B"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <View
-        android:layout_width="0dp"
-        android:layout_height="29dp"
-        android:background="#273A42"
-        android:layout_marginTop="36dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:background="#75C09B"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/data_table_time_cv"
-        android:layout_width="70dp"
-        android:layout_height="25dp"
-        android:backgroundTint="#273A42"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="38dp">
+        <View
+            android:layout_width="0dp"
+            android:layout_height="29dp"
+            android:layout_marginTop="36dp"
+            android:background="#273A42"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/data_table_time_cv"
+            android:layout_width="70dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="38dp"
+            android:backgroundTint="#273A42"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/data_table_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:fontFamily="@font/bahnschrift"
+                android:text="BUGÜN"
+                android:textAlignment="viewStart"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="52dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/ic_data_table_polygon">
+            </ImageView>
+
+        </androidx.cardview.widget.CardView>
+
 
         <TextView
-            android:id="@+id/data_table_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
             android:fontFamily="@font/bahnschrift"
-            android:text="BUGÜN"
-            android:textAlignment="viewStart"
+            android:text="VERİ TABLOSU"
             android:textColor="@color/white"
-            android:layout_marginTop="3dp"
-            android:textSize="15sp" />
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/ic_data_table_polygon"
-            android:layout_marginTop="6dp"
-            android:layout_marginStart="52dp">
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </TextView>
 
-        </ImageView>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_data_table"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="65dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </androidx.recyclerview.widget.RecyclerView>
 
-    </androidx.cardview.widget.CardView>
+        <View
+            android:id="@+id/data_table_opacity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#BF000000"
+            android:visibility="gone">
+        </View>
 
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="VERİ TABLOSU"
-        android:textSize="18sp"
-        android:textColor="@color/white"
-        android:fontFamily="@font/bahnschrift"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="40dp">
-
-
-    </TextView>
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_data_table"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="65dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
-
-    </androidx.recyclerview.widget.RecyclerView>
-
-    <View
-        android:id="@+id/data_table_opacity"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#BF000000"
-        android:visibility="gone">
-
-    </View>
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

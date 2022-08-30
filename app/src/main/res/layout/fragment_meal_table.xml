@@ -4,11 +4,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context="view.fragment.MealTableFragment">
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="view.fragment.MealTableFragment">
+    android:layout_height="wrap_content">
 
     <Toolbar
         android:id="@+id/meal_table_toolbar"
@@ -50,6 +51,17 @@
 
     </TextView>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/meal_table_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/meal_table_date">
+    </androidx.recyclerview.widget.RecyclerView>
+
+
     <TextView
         android:id="@+id/meal_table_warning"
         android:layout_width="wrap_content"
@@ -64,7 +76,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
     </TextView>
 
 
@@ -78,6 +89,7 @@
         app:layout_constraintBottom_toBottomOf="parent">
 
     </View>
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/meal_table_fab"
         android:layout_width="wrap_content"
@@ -91,7 +103,6 @@
         app:tint="@color/white"
         android:backgroundTint="#192E35"
         android:elevation="6dp" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

@@ -4,12 +4,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".view.fragment.RegisterFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".view.fragment.RegisterFragment">
+        android:layout_height="wrap_content">
 
         <Toolbar
             android:id="@+id/register_toolbar"
@@ -20,18 +21,17 @@
             android:padding="4dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" >
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="KAYIT OL"
-                android:textSize="25sp"
-                android:textStyle="bold"
+                android:layout_gravity="center"
                 android:fontFamily="@font/bahnschrift"
+                android:text="KAYIT OL"
                 android:textColor="@color/white"
-                android:layout_gravity="center">
-
+                android:textSize="25sp"
+                android:textStyle="bold">
             </TextView>
 
             <ImageView
@@ -43,8 +43,6 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
         </Toolbar>
-
-
 
 
         <com.google.android.material.textfield.TextInputLayout
