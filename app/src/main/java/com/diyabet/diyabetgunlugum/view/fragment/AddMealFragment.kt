@@ -6,12 +6,24 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
+import com.diyabet.diyabetgunlugum.R
+import com.diyabet.diyabetgunlugum.databinding.AddMealBottomSheetCorrectBinding
+import com.diyabet.diyabetgunlugum.databinding.AddMealBottomSheetIncorrectBinding
 import com.diyabet.diyabetgunlugum.databinding.FragmentAddMealBinding
+import com.diyabet.diyabetgunlugum.databinding.HomeBottomSheetBinding
+import com.google.android.material.bottomsheet.BottomSheetDialog
+import kotlinx.coroutines.delay
+import okhttp3.internal.wait
 import java.util.*
 
 class AddMealFragment : Fragment() {
     private lateinit var binding: FragmentAddMealBinding
     private val calendar = Calendar.getInstance()
+
+    lateinit var correctBottomSheetBinding: AddMealBottomSheetCorrectBinding
+    lateinit var incorrectBottomSheetBinding: AddMealBottomSheetIncorrectBinding
+    lateinit var correctBottomSheet: BottomSheetDialog
+    lateinit var inCorrectBottomSheet: BottomSheetDialog
 
     val hour = calendar.get(Calendar.HOUR)
     val minute = calendar.get(Calendar.MINUTE)
@@ -22,7 +34,12 @@ class AddMealFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentAddMealBinding.inflate(inflater, container, false)
-
+        correctBottomSheetBinding = AddMealBottomSheetCorrectBinding.inflate(inflater, container, false)
+        incorrectBottomSheetBinding = AddMealBottomSheetIncorrectBinding.inflate(inflater, container, false)
+        correctBottomSheet = BottomSheetDialog(requireContext(), R.style.BottomSheetStyle)
+        inCorrectBottomSheet = BottomSheetDialog(requireContext(), R.style.BottomSheetStyle)
+        correctBottomSheet.setContentView(correctBottomSheetBinding.root)
+        inCorrectBottomSheet.setContentView(incorrectBottomSheetBinding.root)
         return binding.root
     }
 
@@ -51,9 +68,15 @@ class AddMealFragment : Fragment() {
             }
         }
 
-        binding.btnMealRegister.setOnClickListener {
-            val action=AddMealFragmentDirections.actionAddMealFragmentToMealTableFragment()
-            Navigation.findNavController(it).navigate(action)
+        binding.addMealBtnMealSave.setOnClickListener {
+            if (binding.edtMeal.text.isNotEmpty()){
+                correctBottomSheet.show()
+
+            }else{
+                inCorrectBottomSheet.show()
+            }
+            /*val action=AddMealFragmentDirections.actionAddMealFragmentToMealTableFragment()
+            Navigation.findNavController(it).navigate(action)*/
         }
         binding.btnTimePicker2.setOnClickListener {
             showTimePickerDialog()
