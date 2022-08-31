@@ -165,7 +165,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="4dp"
-            android:text="mehmedturuncu"
+            android:text="mehmedturuncu@gmail.com"
             android:textColor="#FFFFFF"
             android:textSize="19sp"
             android:textStyle="bold"

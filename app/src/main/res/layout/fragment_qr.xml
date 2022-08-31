@@ -15,14 +15,12 @@
         android:orientation="vertical"
         android:padding="20dp">
 
-        <View
+        <ImageView
             android:id="@+id/qr_code"
-            android:layout_width="220dp"
-            android:layout_height="220dp"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
             android:layout_marginTop="20dp"
-            android:background="@drawable/qr_code"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 

@@ -36,7 +36,11 @@
         android:id="@+id/qrFragment"
         android:name="com.diyabet.diyabetgunlugum.view.fragment.QrFragment"
         android:label="fragment_qr"
-        tools:layout="@layout/fragment_qr" />
+        tools:layout="@layout/fragment_qr" >
+        <action
+            android:id="@+id/action_qrFragment_to_qrScanFragment"
+            app:destination="@id/qrScanFragment" />
+    </fragment>
     <fragment
         android:id="@+id/splashFragment"
         android:name="com.diyabet.diyabetgunlugum.view.fragment.SplashFragment"
@@ -97,4 +101,13 @@
         android:name="com.diyabet.diyabetgunlugum.view.fragment.DatePickerFragment"
         android:label="fragment_date_picker"
         tools:layout="@layout/fragment_date_picker" />
+    <fragment
+        android:id="@+id/qrScanFragment"
+        android:name="com.diyabet.diyabetgunlugum.view.fragment.QrScanFragment"
+        android:label="fragment_qr_scan"
+        tools:layout="@layout/fragment_qr_scan" >
+        <action
+            android:id="@+id/action_qrScanFragment_to_qrFragment"
+            app:destination="@id/qrFragment" />
+    </fragment>
 </navigation>
