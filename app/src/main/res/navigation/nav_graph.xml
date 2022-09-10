@@ -31,7 +31,15 @@
         android:id="@+id/profileFragment"
         android:name="com.diyabet.diyabetgunlugum.view.fragment.ProfileFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+        <argument
+            android:name="editUserProfile"
+            app:argType="com.diyabet.diyabetgunlugum.ProfileData"
+            app:nullable="true" />
+    </fragment>
     <fragment
         android:id="@+id/qrFragment"
         android:name="com.diyabet.diyabetgunlugum.view.fragment.QrFragment"
@@ -109,5 +117,18 @@
         <action
             android:id="@+id/action_qrScanFragment_to_qrFragment"
             app:destination="@id/qrFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.diyabet.diyabetgunlugum.view.fragment.EditProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" >
+        <action
+            android:id="@+id/action_editProfileFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <argument
+            android:name="userProfile"
+            app:argType="com.diyabet.diyabetgunlugum.ProfileData"
+            app:nullable="true" />
     </fragment>
 </navigation>

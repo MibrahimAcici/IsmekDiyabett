@@ -38,52 +38,39 @@
 
         <Button
             android:id="@+id/btn_timePicker"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="28dp"
+            android:textStyle="bold"
             android:backgroundTint="#477768"
             android:text="Tarih seçiniz"
-            app:layout_constraintEnd_toStartOf="@id/btn_timePicker2"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_newMeal" />
-
-        <TextView
-            android:id="@+id/tv_textTime"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="16-06-2020"
-            android:textColor="#000000"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@id/btn_timePicker2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btn_timePicker" />
-
-        <Button
-            android:id="@+id/btn_timePicker2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="28dp"
-            android:layout_marginTop="8dp"
-            android:backgroundTint="#477768"
-            android:text="Saat seçiniz"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/btn_timePicker"
             app:layout_constraintTop_toBottomOf="@+id/tv_newMeal" />
 
 
         <TextView
-            android:id="@+id/tv_timePicker"
+            android:id="@+id/tv_datePicker"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="28dp"
-            android:text="Seçilen Tarih : "
+            android:text="Tarih : "
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@id/tv_addMeal"
             app:layout_constraintStart_toStartOf="@id/btn_timePicker"
+            app:layout_constraintTop_toBottomOf="@+id/btn_timePicker" />
+        <TextView
+            android:id="@+id/tv_timePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saat : "
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/tv_addMeal"
+            app:layout_constraintStart_toEndOf="@id/tv_datePicker"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_timePicker" />
 
         <TextView
@@ -102,8 +89,8 @@
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@id/tv_timePicker"
-            app:layout_constraintTop_toBottomOf="@id/tv_timePicker" />
+            app:layout_constraintStart_toStartOf="@id/tv_datePicker"
+            app:layout_constraintTop_toBottomOf="@id/tv_datePicker" />
 
         <EditText
             android:id="@+id/edt_meal"
@@ -113,10 +100,11 @@
             android:background="@drawable/ic_buttonyeni"
             android:hint="Eklemek istediğiniz yemek : "
             android:padding="4dp"
+            android:maxLength="30"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@id/tv_addMeal"
+            app:layout_constraintStart_toStartOf="@id/btn_timePicker"
             app:layout_constraintTop_toBottomOf="@id/tv_addMeal" />
 
         <Button
@@ -150,20 +138,34 @@
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@id/tv_timePicker"
+            app:layout_constraintStart_toStartOf="@id/tv_datePicker"
             app:layout_constraintTop_toBottomOf="@id/edt_meal" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_mealTable"
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
             android:layout_width="match_parent"
             android:layout_height="400dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="12dp"
             app:layout_constraintBottom_toTopOf="@id/add_meal_btn_meal_save"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_addedMeal">
-        </androidx.recyclerview.widget.RecyclerView>
+            app:layout_constraintTop_toBottomOf="@id/tv_addedMeal"
+            app:layout_constraintVertical_bias="0.0">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_mealTable"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="12dp"
+                app:layout_constraintBottom_toTopOf="@id/add_meal_btn_meal_save"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_addedMeal" />
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
         <Button
             android:id="@+id/add_meal_btn_meal_save"
@@ -178,7 +180,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/rv_mealTable" />
+            app:layout_constraintTop_toBottomOf="@+id/swipeRefreshLayout" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

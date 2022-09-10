@@ -4,6 +4,7 @@ plugins {
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
     id 'androidx.navigation.safeargs'
+    id 'kotlin-parcelize'
 }
 
 android {
@@ -89,4 +90,10 @@ dependencies {
     implementation 'com.google.zxing:core:3.3.3'
     //QR Scan
     implementation 'com.github.yuriy-budiyev:code-scanner:2.3.2'
+
+    //swipe
+    implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
+
+    //decorator
+    implementation 'com.github.xabaras:RecyclerViewSwipeDecorator:1.4'
 }

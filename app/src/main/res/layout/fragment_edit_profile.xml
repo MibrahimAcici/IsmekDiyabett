@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context="view.fragment.EditProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/myRectangleViewTop"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:background="#75C09B"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ellipse"
+            android:layout_width="104dp"
+            android:layout_height="104dp"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="44dp"
+            android:src="@drawable/profile_ellipse"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/myRectangleViewTop"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+            app:strokeColor="#192E35" />
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@id/profile"
+            android:layout_width="97dp"
+            android:layout_height="97dp"
+            android:layout_marginStart="37dp"
+            android:layout_marginTop="48dp"
+            android:src="@drawable/profile_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/myRectangleViewTop"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+            app:strokeColor="#192E35" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/name"
+            android:layout_width="184dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="52dp"
+            app:cardBackgroundColor="#DBDCDD"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="10dp"
+            app:layout_constraintStart_toEndOf="@id/profile"
+            app:layout_constraintTop_toBottomOf="@id/myRectangleViewTop">
+
+            <View
+                android:layout_width="184dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_rectanglemedium" />
+
+            <EditText
+                android:id="@+id/edit_profile_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="MEHMET"
+                android:textColor="#FFFFFF"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/name"
+                app:layout_constraintTop_toTopOf="@+id/name" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/surname"
+            android:layout_width="184dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="#DBDCDD"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="10dp"
+            app:layout_constraintStart_toEndOf="@id/profile"
+            app:layout_constraintTop_toBottomOf="@id/name">
+
+            <View
+                android:layout_width="184dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_rectanglemedium" />
+
+            <EditText
+                android:id="@+id/edit_profile_surname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="TURUNCU"
+                android:textColor="#FFFFFF"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/surname"
+                app:layout_constraintTop_toTopOf="@+id/surname" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/mobil_phone"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="68dp"
+            app:cardBackgroundColor="#DBDCDD"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profile">
+
+            <View
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_rectanglelarge"
+                app:layout_constraintTop_toBottomOf="@+id/profile" />
+
+            <EditText
+                android:id="@+id/edit_profile_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="0534 787 78 78"
+                android:textColor="#FFFFFF"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/mobil_phone"
+                app:layout_constraintTop_toTopOf="@+id/mobil_phone" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/user_name"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="24dp"
+            app:cardBackgroundColor="#DBDCDD"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mobil_phone">
+
+            <View
+
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_rectanglelarge" />
+
+            <EditText
+                android:id="@+id/edit_profile_mail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="mehmedturuncu@gmail.com"
+                android:textColor="#FFFFFF"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/user_name"
+                app:layout_constraintTop_toTopOf="@+id/user_name" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/birth_date"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="24dp"
+            app:cardBackgroundColor="#DBDCDD"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/user_name">
+
+            <View
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_rectanglelarge" />
+
+            <EditText
+                android:id="@+id/edit_profile_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="01.10.2000"
+                android:textColor="#FFFFFF"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/birth_date"
+                app:layout_constraintTop_toTopOf="@+id/birth_date" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/gender"
+            android:layout_width="79dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="24dp"
+            app:cardBackgroundColor="#DBDCDD"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/birth_date">
+
+            <View
+                android:layout_width="79dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_rectanglesmall" />
+
+            <EditText
+                android:id="@+id/edit_profile_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="ERKEK"
+                android:textColor="#FFFFFF"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/gender"
+                app:layout_constraintEnd_toEndOf="@+id/gender"
+                app:layout_constraintStart_toStartOf="@+id/gender"
+                app:layout_constraintTop_toTopOf="@+id/gender" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/size"
+            android:layout_width="79dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="24dp"
+            app:cardBackgroundColor="#DBDCDD"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="10dp"
+            app:layout_constraintStart_toEndOf="@id/gender"
+            app:layout_constraintTop_toBottomOf="@id/birth_date">
+
+            <View
+                android:layout_width="79dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_rectanglesmall" />
+
+            <EditText
+                android:id="@+id/edit_profile_height"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="1.80"
+                android:textColor="#FFFFFF"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/size"
+                app:layout_constraintEnd_toEndOf="@+id/size"
+                app:layout_constraintStart_toStartOf="@+id/size"
+                app:layout_constraintTop_toTopOf="@+id/size" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/kilo"
+            android:layout_width="79dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="24dp"
+            app:cardBackgroundColor="#DBDCDD"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="10dp"
+            app:layout_constraintStart_toEndOf="@id/size"
+            app:layout_constraintTop_toBottomOf="@id/birth_date">
+
+            <View
+                android:layout_width="79dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_rectanglesmall" />
+
+            <EditText
+                android:id="@+id/edit_profile_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="90"
+                android:textColor="#FFFFFF"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/kilo"
+                app:layout_constraintEnd_toEndOf="@+id/kilo"
+                app:layout_constraintStart_toStartOf="@+id/kilo"
+                app:layout_constraintTop_toTopOf="@+id/kilo" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/edit_profile_btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/ic_button_selected"
+            android:fontFamily="@font/bahnschrift"
+            android:text="Kaydet"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
