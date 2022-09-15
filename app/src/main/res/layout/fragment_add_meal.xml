@@ -180,27 +180,23 @@
                 android:layout_height="400dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="12dp"
-                app:layout_constraintBottom_toTopOf="@id/add_meal_btn_meal_save"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_addedMeal" />
 
 
-            <Button
-                android:id="@+id/add_meal_btn_meal_save"
-                style="@style/Widget.MaterialComponents.Button.Icon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:layout_marginBottom="20dp"
-                android:backgroundTint="#477768"
-                android:text="öğünü kaydet"
-                app:icon="@drawable/ic_baseline_check_24"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/rv_mealTable" />
-
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
+
+    <Button
+        android:id="@+id/add_meal_btn_meal_save"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="#477768"
+        android:text="öğünü kaydet"
+        app:icon="@drawable/ic_baseline_check_24" />
 </RelativeLayout>
