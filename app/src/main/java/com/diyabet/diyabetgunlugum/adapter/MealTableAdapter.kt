@@ -2,13 +2,12 @@ package com.diyabet.diyabetgunlugum.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.diyabet.diyabetgunlugum.MealTableData
-import com.diyabet.diyabetgunlugum.databinding.MealTableInnerItemBinding
 import com.diyabet.diyabetgunlugum.databinding.MealTableItemBinding
-import com.diyabet.diyabetgunlugum.view.MealTableItemData
+import com.diyabet.diyabetgunlugum.view.fragment.MealTableFragmentDirections
 
 class MealTableAdapter() : RecyclerView.Adapter<MealTableAdapter.MealViewHolder> () {
 
@@ -27,15 +26,20 @@ class MealTableAdapter() : RecyclerView.Adapter<MealTableAdapter.MealViewHolder>
     }
 
     override fun onBindViewHolder(holder: MealTableAdapter.MealViewHolder, position: Int) {
-        val data = mealdatalist[position]
-        holder.binding.mealTableItemTv.text = data.saat
+        val mealTableData = mealdatalist[position]
+        holder.binding.mealTableItemTv.text = mealTableData.time
 
         holder.binding.mealTableItemRv.apply {
             var mealTableInnerAdapter = MealTableItemAdapter()
             adapter = mealTableInnerAdapter
             layoutManager = LinearLayoutManager(context)
 
-            mealTableInnerAdapter.setList(data.mealList)
+            mealTableInnerAdapter.setList(mealTableData.mealList)
+        }
+
+        holder.binding.root.setOnClickListener {
+            val action= MealTableFragmentDirections.actionMealTableFragmentToAddMealFragment(mealTableData)
+            Navigation.findNavController(it).navigate(action)
         }
     }
     override fun getItemCount() : Int = mealdatalist.size

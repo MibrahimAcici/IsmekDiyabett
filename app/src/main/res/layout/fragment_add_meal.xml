@@ -1,157 +1,177 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true"
     tools:context="view.fragment.AddMealFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/tv_newMeal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:background="@drawable/toolbar_rect"
+        android:padding="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <Toolbar
-            android:id="@+id/tv_newMeal"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/add_meal_title_textview"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:background="@drawable/toolbar_rect"
-            android:padding="4dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_gravity="center"
+            android:fontFamily="@font/bahnschrift"
+            android:text="YENİ ÖĞÜN"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold">
+        </TextView>
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_newMeal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_timePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:backgroundTint="#477768"
+                android:text="Tarih seçiniz"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
 
             <TextView
+                android:id="@+id/tv_datePicker"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:fontFamily="@font/bahnschrift"
-                android:text="YENİ ÖĞÜN"
+                android:layout_marginTop="28dp"
+                android:text="Tarih : "
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/tv_addMeal"
+                app:layout_constraintStart_toStartOf="@id/btn_timePicker"
+                app:layout_constraintTop_toBottomOf="@+id/btn_timePicker" />
+
+            <TextView
+                android:id="@+id/add_meal_date_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:text="01.01.2022"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/tv_datePicker"
+                app:layout_constraintTop_toBottomOf="@+id/btn_timePicker" />
+
+            <TextView
+                android:id="@+id/tv_timePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Saat : "
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/tv_addMeal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/add_meal_date_textview"
+                app:layout_constraintTop_toBottomOf="@+id/btn_timePicker" />
+
+            <TextView
+                android:id="@+id/add_meal_time_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11:09"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/tv_addMeal"
+                app:layout_constraintStart_toEndOf="@id/tv_timePicker"
+                app:layout_constraintTop_toBottomOf="@+id/btn_timePicker" />
+
+            <TextView
+                android:id="@+id/tv_addMeal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/ic_buttonyeni"
+                android:backgroundTint="#192E35"
+                android:elevation="6dp"
+                android:padding="8dp"
+                android:text="Öğün Ekle"
+                android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="25sp"
-                android:textStyle="bold">
-            </TextView>
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/tv_datePicker"
+                app:layout_constraintTop_toBottomOf="@id/tv_datePicker" />
 
-        </Toolbar>
+            <EditText
+                android:id="@+id/edt_meal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:background="@drawable/ic_buttonyeni"
+                android:hint="Eklemek istediğiniz yemek : "
+                android:maxLength="30"
+                android:padding="4dp"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/btn_timePicker"
+                app:layout_constraintTop_toBottomOf="@id/tv_addMeal" />
 
-        <Button
-            android:id="@+id/btn_timePicker"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="28dp"
-            android:textStyle="bold"
-            android:backgroundTint="#477768"
-            android:text="Tarih seçiniz"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_newMeal" />
+            <Button
+                android:id="@+id/btn_addNewMeal"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="28dp"
+                android:backgroundTint="#477768"
+                android:text="EKLE"
+                app:icon="@drawable/ic_baseline_add_24"
+                app:layout_constraintBottom_toBottomOf="@id/edt_meal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/edt_meal"
+                app:layout_constraintTop_toBottomOf="@+id/tv_addMeal" />
 
-
-        <TextView
-            android:id="@+id/tv_datePicker"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
-            android:text="Tarih : "
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@id/tv_addMeal"
-            app:layout_constraintStart_toStartOf="@id/btn_timePicker"
-            app:layout_constraintTop_toBottomOf="@+id/btn_timePicker" />
-        <TextView
-            android:id="@+id/tv_timePicker"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Saat : "
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@id/tv_addMeal"
-            app:layout_constraintStart_toEndOf="@id/tv_datePicker"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_timePicker" />
-
-        <TextView
-            android:id="@+id/tv_addMeal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="28dp"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/ic_buttonyeni"
-            android:backgroundTint="#192E35"
-            android:elevation="6dp"
-            android:padding="8dp"
-            android:text="Öğün Ekle"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@id/tv_datePicker"
-            app:layout_constraintTop_toBottomOf="@id/tv_datePicker" />
-
-        <EditText
-            android:id="@+id/edt_meal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
-            android:background="@drawable/ic_buttonyeni"
-            android:hint="Eklemek istediğiniz yemek : "
-            android:padding="4dp"
-            android:maxLength="30"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@id/btn_timePicker"
-            app:layout_constraintTop_toBottomOf="@id/tv_addMeal" />
-
-        <Button
-            android:id="@+id/btn_addNewMeal"
-            style="@style/Widget.MaterialComponents.Button.Icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="28dp"
-            android:backgroundTint="#477768"
-            android:text="EKLE"
-            app:icon="@drawable/ic_baseline_add_24"
-            app:layout_constraintBottom_toBottomOf="@id/edt_meal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/edt_meal"
-            app:layout_constraintTop_toBottomOf="@+id/tv_addMeal" />
-
-        <TextView
-            android:id="@+id/tv_addedMeal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="28dp"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/ic_buttonyeni"
-            android:backgroundTint="#192E35"
-            android:elevation="6dp"
-            android:padding="8dp"
-            android:text="Ekledikleriniz"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@id/tv_datePicker"
-            app:layout_constraintTop_toBottomOf="@id/edt_meal" />
-
-
-        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-            android:id="@+id/swipeRefreshLayout"
-            android:layout_width="match_parent"
-            android:layout_height="400dp"
-            app:layout_constraintBottom_toTopOf="@id/add_meal_btn_meal_save"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_addedMeal"
-            app:layout_constraintVertical_bias="0.0">
+            <TextView
+                android:id="@+id/tv_addedMeal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/ic_buttonyeni"
+                android:backgroundTint="#192E35"
+                android:elevation="6dp"
+                android:padding="8dp"
+                android:text="Ekledikleriniz"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/tv_datePicker"
+                app:layout_constraintTop_toBottomOf="@id/edt_meal" />
 
 
             <androidx.recyclerview.widget.RecyclerView
@@ -165,23 +185,22 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_addedMeal" />
 
-        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
-        <Button
-            android:id="@+id/add_meal_btn_meal_save"
-            style="@style/Widget.MaterialComponents.Button.Icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:layout_marginBottom="20dp"
-            android:backgroundTint="#477768"
-            android:text="öğünü kaydet"
-            app:icon="@drawable/ic_baseline_check_24"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/swipeRefreshLayout" />
+            <Button
+                android:id="@+id/add_meal_btn_meal_save"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="#477768"
+                android:text="öğünü kaydet"
+                app:icon="@drawable/ic_baseline_check_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rv_mealTable" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-</ScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</RelativeLayout>

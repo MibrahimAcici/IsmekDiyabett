@@ -26,6 +26,7 @@
         <action
             android:id="@+id/action_mealTableFragment_to_addMealFragment"
             app:destination="@id/addMealFragment" />
+
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -94,6 +95,10 @@
         <action
             android:id="@+id/action_addMealFragment_to_timePickerFragment"
             app:destination="@id/timePickerFragment" />
+        <argument
+            android:name="currentMealTableData"
+            app:argType="com.diyabet.diyabetgunlugum.MealTableData"
+            app:nullable="true" />
     </fragment>
     <fragment
         android:id="@+id/timePickerFragment"

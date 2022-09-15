@@ -5,20 +5,20 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.diyabet.diyabetgunlugum.databinding.AddMealItemBinding
-import com.diyabet.diyabetgunlugum.MealData
+import com.diyabet.diyabetgunlugum.MealTableItemData
 
-class AddMealAdapter (val mealList: List<MealData>,val clickListener: ClickListener): RecyclerView.Adapter<AddMealAdapter.ViewHolder>() {
+class AddMealAdapter (val mealList: List<MealTableItemData>,val clickListener: ClickListener): RecyclerView.Adapter<AddMealAdapter.ViewHolder>() {
 
     interface ClickListener{
-        fun onItemClick(data : MealData)
+        fun onItemClick(data : MealTableItemData)
     }
 
 
     inner class ViewHolder (val binding : AddMealItemBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(data : MealData){
+        fun bind(data : MealTableItemData){
             itemView.apply {
                 with(data){
-                    binding.tvAddedMeal.text = addedMealName
+                    binding.tvAddedMeal.text = meal
 
                 }
             }
@@ -43,7 +43,7 @@ class AddMealAdapter (val mealList: List<MealData>,val clickListener: ClickListe
         return mealList.size
     }
 
-    fun setlist(meal : List<MealData>){
+    fun setlist(meal : List<MealTableItemData>){
         // this.mealList.clear()
         //this.mealList.addAll(meal)
         notifyDataSetChanged()
