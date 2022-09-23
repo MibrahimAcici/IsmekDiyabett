@@ -6,4 +6,5 @@
         <item>Erkek</item>
         <item>Kadın</item>
     </string-array>
+    <string name="questıon_tıtle">Öğünü sil</string>
 </resources>

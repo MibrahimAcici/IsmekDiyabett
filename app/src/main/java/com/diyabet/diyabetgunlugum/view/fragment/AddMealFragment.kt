@@ -19,6 +19,7 @@ import com.diyabet.diyabetgunlugum.adapter.AddMealAdapter
 import com.diyabet.diyabetgunlugum.databinding.AddMealBottomSheetCorrectBinding
 import com.diyabet.diyabetgunlugum.databinding.AddMealBottomSheetIncorrectBinding
 import com.diyabet.diyabetgunlugum.databinding.FragmentAddMealBinding
+import com.diyabet.diyabetgunlugum.util.Constant
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import java.util.*
 import kotlin.collections.ArrayList
@@ -93,7 +94,7 @@ class AddMealFragment :Fragment(), AddMealAdapter.ClickListener {
                 val supportFragmentManager = requireActivity().supportFragmentManager
 
                 supportFragmentManager.setFragmentResultListener("REQUEST_KEY", viewLifecycleOwner) { resultKey, bundle->
-                    if (resultKey == "REQUEST_KEY") {
+                    if (resultKey == Constant.REQUEST_KEY) {
                         val date = bundle.getString("SELECTED_DATE")
                         showTimePickerDialog()
                         binding.addMealDateTextview.text = date
@@ -120,15 +121,15 @@ class AddMealFragment :Fragment(), AddMealAdapter.ClickListener {
 
     private fun showDialog(viewHolder: RecyclerView.ViewHolder) {
         var builder = AlertDialog.Builder(activity)
-        builder.setTitle("Öğünü sil")
+        builder.setTitle(getString(R.string.questıon_tıtle))
         builder.setMessage("Öğünü silmek istediğinize emin misiniz ? ")
         builder.setPositiveButton("Onayla") { dialog, which->
-            val position = viewHolder.adapterPosition
+            val position = viewHolder.bindingAdapterPosition
             list.removeAt(position)
             addedMealAdapter.notifyItemRemoved(position)
         }
         builder.setNegativeButton("İptal") { dialog, which->
-            val position = viewHolder.adapterPosition
+            val position = viewHolder.bindingAdapterPosition
             addedMealAdapter.notifyItemChanged(position)
         }
         builder.show()

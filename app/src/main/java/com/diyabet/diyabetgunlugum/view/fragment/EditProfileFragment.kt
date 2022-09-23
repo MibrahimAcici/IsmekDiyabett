@@ -5,17 +5,18 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.navArgs
 import com.diyabet.diyabetgunlugum.ProfileData
+import com.diyabet.diyabetgunlugum.R
 import com.diyabet.diyabetgunlugum.databinding.FragmentEditProfileBinding
 
 
 
 class EditProfileFragment : Fragment() {
     private lateinit var binding: FragmentEditProfileBinding
-    lateinit var editUserProfile : ProfileData
-    private val args: EditProfileFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -30,35 +31,73 @@ class EditProfileFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.apply {
+            //binding.editProfileName.setText("ahmet")
+            val arrayAdapter = ArrayAdapter(
+                requireContext(),
+                R.layout.dropdown_item,
+                resources.getStringArray(R.array.gender)
+            )
+            editProfileGender.setAdapter(arrayAdapter)
+
+            binding.editProfileBtnSave.setOnClickListener {
+                if (checkText()) {
+
+                val action = EditProfileFragmentDirections.actionEditProfileFragmentToProfileFragment()
+                    Navigation.findNavController(it).navigate(action)
+            }
+            }
 
 
 
 
-        val profileName=args.userProfile?.profile_name
-        val profileSurname=args.userProfile?.profile_surname
-        val profileNumber=args.userProfile?.profile_number
-        val profileMail=args.userProfile?.profile_mail
-        val profileDate=args.userProfile?.profile_date
-        val profileGender=args.userProfile?.profile_gender
-        val profileHeight=args.userProfile?.profile_height
-        val profileWeight=args.userProfile?.profile_weight
+        }
+    }
 
-        binding.editProfileName.setText(profileName.toString())
-        binding.editProfileSurname.setText(profileSurname.toString())
-        binding.editProfileNumber.setText(profileNumber.toString())
-        binding.editProfileMail.setText(profileMail.toString())
-        binding.editProfileDate.setText(profileDate.toString())
-        binding.editProfileGender.setText(profileGender.toString())
-        binding.editProfileHeight.setText(profileHeight.toString())
-        binding.editProfileWeight.setText(profileWeight.toString())
+    private fun checkText(): Boolean {
+        var isEmpty = true
 
-        editUserProfile = ProfileData(binding.editProfileName.text.toString(),binding.editProfileSurname.text.toString(),binding.editProfileNumber.text.toString(),binding.editProfileMail.text.toString(),binding.editProfileDate.text.toString(),binding.editProfileGender.text.toString(),binding.editProfileHeight.text.toString(),binding.editProfileWeight.text.toString())
+        binding.apply {
+        if (editProfileName.text!!.isEmpty()) {
+            editProfileName.error = "Lütfen boş bırakmayınız"
+            isEmpty = false
+        } else (editProfileName.error) = null
+        if (editProfileSurname.text!!.isEmpty()) {
+            editProfileSurname.error = "Lütfen boş bırakmayınız"
+            isEmpty = false
+        } else (editProfileSurname.error) = null
+        if (editProfileNumber.text!!.isEmpty()) {
+            editProfileNumber.error = "Lütfen boş bırakmayınız"
+            isEmpty = false
+        } else (editProfileNumber.error) = null
+        if (editProfileMail.text!!.isEmpty()) {
+            editProfileMail.error = "Lütfen boş bırakmayınız"
+            isEmpty = false
+        } else if (!editProfileMail.text!!.contains('@')) {
+            editProfileMail.error = "E-mail formatı hatalı"
+            isEmpty = false
+        } else (editProfileMail.error) = null
+        if (editProfileDate.text!!.isEmpty()) {
+            editProfileDate.error = "Lütfen boş bırakmayınız"
+            isEmpty = false
+        } else (editProfileDate.error) = null
+        if (editProfileWeight.text!!.isEmpty()) {
+            editProfileWeight.error = "Lütfen boş bırakmayınız"
+            isEmpty = false
+        }else(editProfileWeight.error) = null
+        if (editProfileHeight.text!!.isEmpty()) {
+            editProfileHeight.error = "Lütfen boş bırakmayınız"
+            isEmpty = false
+        } else (editProfileHeight.error) = null
 
-        binding.editProfileBtnSave.setOnClickListener {
+        }
+        return isEmpty
+
+    }
+}
+/*
+ binding.editProfileBtnSave.setOnClickListener {
             val action=EditProfileFragmentDirections.actionEditProfileFragmentToProfileFragment(editUserProfile)
             Navigation.findNavController(it).navigate(action)
         }
-
-    }
-
-}
+ */
