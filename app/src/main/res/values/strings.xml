@@ -2,6 +2,7 @@
     <string name="app_name">DiyabetGunlugum</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="empty_input_text">Lütfen boş bırakmayınız</string>
+
     <string-array name="gender">
         <item>Erkek</item>
         <item>Kadın</item>

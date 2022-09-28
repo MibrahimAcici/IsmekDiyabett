@@ -28,7 +28,7 @@ class EditProfileFragment : Fragment() {
         return binding.root
 
     }
-
+//diyabetgunlugum://user?kjlkjkl
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.apply {

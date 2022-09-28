@@ -37,7 +37,7 @@ class QrFragment : Fragment() {
             Navigation.findNavController(it).navigate(action)
         }
 
-        val qrData = "mehmetturuncu@gmail.com".trim()
+        val qrData = "diyabetgunlugum://user?iacici".trim()
 
         if (qrData.isEmpty()){
             Toast.makeText(requireContext(),"enter some data",Toast.LENGTH_LONG).show()
