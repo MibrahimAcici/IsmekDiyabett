@@ -1,4 +1,4 @@
-package com.diyabet.diyabetgunlugum
+package com.diyabet.diyabetgunlugum.model
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize

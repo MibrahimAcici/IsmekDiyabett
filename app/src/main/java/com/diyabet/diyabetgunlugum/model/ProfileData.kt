@@ -1,11 +1,11 @@
-package com.diyabet.diyabetgunlugum
+package com.diyabet.diyabetgunlugum.model
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class ProfileData (
-    var profile_name : String,
+    var profile_name : String? = null,
     var profile_surname : String,
     var profile_number : String,
     var profile_mail : String,

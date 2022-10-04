@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.PopupMenu
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.diyabet.diyabetgunlugum.DataTableData
+import com.diyabet.diyabetgunlugum.model.DataTableData
 import com.diyabet.diyabetgunlugum.adapter.DataTableAdapter
 import com.diyabet.diyabetgunlugum.databinding.FragmentDataTableBinding
 

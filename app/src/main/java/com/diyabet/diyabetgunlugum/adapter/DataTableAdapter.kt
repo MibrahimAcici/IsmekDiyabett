@@ -3,7 +3,7 @@ package com.diyabet.diyabetgunlugum.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.diyabet.diyabetgunlugum.DataTableData
+import com.diyabet.diyabetgunlugum.model.DataTableData
 import com.diyabet.diyabetgunlugum.databinding.DataTableItemBinding
 
 class DataTableAdapter(): RecyclerView.Adapter<DataTableAdapter.DataTableVH>() {

@@ -30,7 +30,7 @@
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.diyabet.diyabetgunlugum.view.fragment.ProfileFragment"
+        android:name="com.diyabet.diyabetgunlugum.view.fragment.profil.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" >
         <action
@@ -93,7 +93,7 @@
             app:destination="@id/timePickerFragment" />
         <argument
             android:name="currentMealTableData"
-            app:argType="com.diyabet.diyabetgunlugum.MealTableData"
+            app:argType="com.diyabet.diyabetgunlugum.model.MealTableData"
             app:nullable="true" />
     </fragment>
     <fragment

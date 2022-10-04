@@ -6,10 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
-import android.widget.Toast
 import androidx.navigation.Navigation
-import androidx.navigation.fragment.navArgs
-import com.diyabet.diyabetgunlugum.ProfileData
 import com.diyabet.diyabetgunlugum.R
 import com.diyabet.diyabetgunlugum.databinding.FragmentEditProfileBinding
 

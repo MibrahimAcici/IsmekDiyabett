@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.diyabet.diyabetgunlugum.MealTableData
+import com.diyabet.diyabetgunlugum.model.MealTableData
 import com.diyabet.diyabetgunlugum.adapter.MealTableAdapter
 import com.diyabet.diyabetgunlugum.databinding.FragmentMealTableBinding
 

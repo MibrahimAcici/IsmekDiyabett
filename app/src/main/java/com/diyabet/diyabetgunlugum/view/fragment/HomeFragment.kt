@@ -11,6 +11,8 @@ import androidx.navigation.fragment.findNavController
 import com.diyabet.diyabetgunlugum.R
 import com.diyabet.diyabetgunlugum.databinding.FragmentHomeBinding
 import com.diyabet.diyabetgunlugum.databinding.HomeBottomSheetBinding
+import com.diyabet.diyabetgunlugum.model.response.LoginSuccessResponseModel
+import com.diyabet.diyabetgunlugum.util.Constant
 import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
@@ -25,6 +27,7 @@ class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
     lateinit var homeBottomSheetBinding: HomeBottomSheetBinding
     lateinit var bottomSheet: BottomSheetDialog
+    private var loginSuccessResponseModel: LoginSuccessResponseModel? = LoginSuccessResponseModel()
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -39,6 +42,14 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val bundleData = arguments
+        loginSuccessResponseModel = bundleData?.getParcelable(Constant.LOGIN_RESPONSE)
+
+        binding.apply {
+            tvAverage2.text = loginSuccessResponseModel?.email
+        }
+
 
         val lineEntryList = arrayListOf<Entry>()
         val xAxisList= arrayOf("06:00","12:00","18:00","20:00","00:00")

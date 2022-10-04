@@ -5,12 +5,14 @@
     <uses-permission
         android:name="android.permission.CAMERA">
     </uses-permission>
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:name=".DiyabetApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:usesCleartextTraffic="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DiyabetGunlugum">
@@ -31,7 +33,7 @@
             <category android:name="android.intent.category.DEFAULT" />
             <category android:name="android.intent.category.BROWSABLE" />
             <data android:scheme="diyabetgunlugum"
-                android:host="user" />
+            android:host="user" />
             </intent-filter>
 
         </activity>

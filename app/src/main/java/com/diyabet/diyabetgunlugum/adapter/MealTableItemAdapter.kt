@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.diyabet.diyabetgunlugum.databinding.MealTableInnerItemBinding
-import com.diyabet.diyabetgunlugum.MealTableItemData
+import com.diyabet.diyabetgunlugum.model.MealTableItemData
 
 class MealTableItemAdapter() : RecyclerView.Adapter<MealTableItemAdapter.MealTableItemVH> () {
 

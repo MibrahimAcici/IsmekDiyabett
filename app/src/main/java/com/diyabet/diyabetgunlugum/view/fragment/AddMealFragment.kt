@@ -7,8 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.fragment.app.viewModels
-import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.ItemTouchHelper
@@ -19,6 +17,8 @@ import com.diyabet.diyabetgunlugum.adapter.AddMealAdapter
 import com.diyabet.diyabetgunlugum.databinding.AddMealBottomSheetCorrectBinding
 import com.diyabet.diyabetgunlugum.databinding.AddMealBottomSheetIncorrectBinding
 import com.diyabet.diyabetgunlugum.databinding.FragmentAddMealBinding
+import com.diyabet.diyabetgunlugum.model.MealTableData
+import com.diyabet.diyabetgunlugum.model.MealTableItemData
 import com.diyabet.diyabetgunlugum.util.Constant
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import java.util.*

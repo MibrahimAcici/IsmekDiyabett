@@ -6,13 +6,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.widget.doOnTextChanged
+import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
 import com.diyabet.diyabetgunlugum.R
 import com.diyabet.diyabetgunlugum.databinding.FragmentLoginBinding
+import com.diyabet.diyabetgunlugum.model.request.LoginRequestModel
+import com.diyabet.diyabetgunlugum.util.Constant
+import com.diyabet.diyabetgunlugum.viewmodel.login.LoginViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class LoginFragment : Fragment() {
 
     private lateinit var binding: FragmentLoginBinding
+    private val loginViewModel: LoginViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,13 +33,28 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.apply {
                 btnRegister.setOnClickListener {
-                    val action=LoginFragmentDirections.actionLoginFragmentToRegisterFragment()
+                    val loginRequestModel = LoginRequestModel().apply {
+                        email = tietEmail.text.toString()
+                        password = tietPassword.text.toString()
+                    }
+                    loginViewModel.login(loginRequestModel)
+
+                    /*val action=LoginFragmentDirections.actionLoginFragmentToRegisterFragment()
                     Navigation.findNavController(it).navigate(action)
-                    //Navigation.findNavController(view).navigate(R.id.action_loginFragment_to_registerFragment)
+                    Navigation.findNavController(view).navigate(R.id.action_loginFragment_to_registerFragment)*/
                 }
 
-                btnLogin.setOnClickListener {
+                loginViewModel.loginResponse.observe(viewLifecycleOwner) {
+                    it?.let {
+                        if (it.status == "1"){
+                            val bundle = Bundle()
+                            bundle.putParcelable(Constant.LOGIN_RESPONSE, it)
+                            Navigation.findNavController(view).navigate(R.id.action_loginFragment_to_homeFragment, bundle)
+                        }
+                    }
+                }
 
+            btnLogin.setOnClickListener {
                     if (tietEmail.text!!.isEmpty()) {
                         tilEmail.error = "Lütfen boş bırakmayınız"
                     } else {
@@ -44,8 +66,7 @@ class LoginFragment : Fragment() {
                     } else {
                         tilPassword.error = null
                 }
-
-        }
+            }
         }
     }
 }

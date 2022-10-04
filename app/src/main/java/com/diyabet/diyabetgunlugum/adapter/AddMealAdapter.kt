@@ -1,13 +1,12 @@
 package com.diyabet.diyabetgunlugum.adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.diyabet.diyabetgunlugum.databinding.AddMealItemBinding
-import com.diyabet.diyabetgunlugum.MealTableItemData
+import com.diyabet.diyabetgunlugum.model.MealTableItemData
 
-class AddMealAdapter (val mealList: List<MealTableItemData>,val clickListener: ClickListener): RecyclerView.Adapter<AddMealAdapter.ViewHolder>() {
+class AddMealAdapter (val mealList: List<MealTableItemData>, val clickListener: ClickListener): RecyclerView.Adapter<AddMealAdapter.ViewHolder>() {
 
     interface ClickListener{
         fun onItemClick(data : MealTableItemData)

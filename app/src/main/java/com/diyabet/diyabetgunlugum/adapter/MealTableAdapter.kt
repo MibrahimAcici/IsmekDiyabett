@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.diyabet.diyabetgunlugum.MealTableData
+import com.diyabet.diyabetgunlugum.model.MealTableData
 import com.diyabet.diyabetgunlugum.databinding.MealTableItemBinding
 import com.diyabet.diyabetgunlugum.view.fragment.MealTableFragmentDirections
 
@@ -30,7 +30,7 @@ class MealTableAdapter() : RecyclerView.Adapter<MealTableAdapter.MealViewHolder>
         holder.binding.mealTableItemTv.text = mealTableData.time
 
         holder.binding.mealTableItemRv.apply {
-            var mealTableInnerAdapter = MealTableItemAdapter()
+            val mealTableInnerAdapter = MealTableItemAdapter()
             adapter = mealTableInnerAdapter
             layoutManager = LinearLayoutManager(context)
 
